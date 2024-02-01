@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 #hero_title {
 text-align: center;
 color: darkblue;
@@ -11,65 +16,47 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
         top:1;
         left:0;
 }
-* {
-  margin: 0;
-  padding: 0;
+
+
+.month-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-body {
-  min-height: 100vh;
+.month-card{
+    text-align: left;
+    background-color: aquamarine;
+    width: 500px;
+    height: 400px;
+    margin-left: 10px;
+    margin-top: 40px;
 }
 
-li form img {
-  width: 20px;
+.month{
+    display: inline;
+    font-size: 40px;
 }
 
-nav {
-  background-color: white;
-  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
+.dropdown{
+    height: 20px;
+    display: inline;
+    background-color: transparent;
+    font-size: 28px;
+    padding-bottom: 30px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-nav ul {
-  width: 100%;
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-nav li {
-  height: 60px;
-  text-decoration: none;
-  padding: 0 30px;
-  display: flex;
-  align-items: center;
-}
-nav a {
-  height: 100%;
-  display: flex;
-  text-decoration: none;
-  align-items: center;
-  color: black;
+.january{
+    background-color: rgb(219, 152, 219);
 }
 
-a:hover {
-  color: rgb(233, 140, 0);
-  text-decoration: underline;
-  text-decoration-color: rgb(233, 140, 0);
-  text-underline-offset: 7px;
+.february{
+    background-color: rgb(245, 237, 122);
 }
 
-nav li:first-child {
-  margin-right: auto;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: auto;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.205);
-  box-shadow: -5px 0px 20px rgba(99, 99, 99, 0.1);
-  flex-direction: column;
-  backdrop-filter: blur(20px);
+.march{
+    background-color: rgb(182, 182, 248);
 }
