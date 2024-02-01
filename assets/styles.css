@@ -1,0 +1,12 @@
+#hero_title {
+text-align: center;
+
+}
+
+#concert_image {
+ height: 99vh;
+        width: 98vw;
+        position:fixed;
+        top:1;
+        left:0;
+}
