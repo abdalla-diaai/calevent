@@ -1,3 +1,16 @@
+#hero_title {
+text-align: center;
+color: darkblue;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#concert_image {
+ height: 99vh;
+        width: 99vw;
+        position:fixed;
+        top:1;
+        left:0;
+}
 * {
   margin: 0;
   padding: 0;
