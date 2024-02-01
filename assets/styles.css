@@ -1,0 +1,79 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.month-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.month-card{
+    text-align: left;
+    background-color: aquamarine;
+    width: 500px;
+    height: 400px;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+.month{
+    display: inline;
+    font-size: 40px;
+}
+
+.dropdown{
+    height: 20px;
+    display: inline;
+    background-color: transparent;
+    font-size: 28px;
+    padding-bottom: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.january{
+    background-color: rgb(219, 152, 219);
+}
+
+.february{
+    background-color: rgb(245, 237, 122);
+}
+
+.march{
+    background-color: rgb(182, 182, 248);
+}
+
+/*
+.calendar-cards:hover{
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: rgb(175, 132, 93);
+    width: 230px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.day{
+    font-size: 22px;
+    margin-top: 29px;
+    margin-bottom: 0px;
+}
+
+.number-of-days{
+    font-size: 70px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+.event-details{
+    margin-top: 19px;
+    background-color: transparent;
+    padding: 5px 15px 5px 15px;
+    border-width: 0.4px;
+    border-radius: 10px;
+    box-shadow: none;
+    cursor: pointer;
+}
