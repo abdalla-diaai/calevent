@@ -10,6 +10,8 @@
 .appName {
   font-size: 1.5rem;
   font-weight: 500;
+  margin-right: auto;
+  align-items: center;
 }
 
 .appNameDecoration {
@@ -49,11 +51,6 @@ nav a:hover {
   text-decoration: underline;
   text-decoration-style: var(--purpleColor);
   text-underline-offset: 8px;
-}
-
-.appName {
-  margin-right: auto;
-  align-items: center;
 }
 
 nav li form {
