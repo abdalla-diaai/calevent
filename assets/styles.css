@@ -69,7 +69,6 @@ nav li form {
 .sidebar {
   position: fixed;
   min-height: 450px;
-  justify-content: flex-start;
   top: 0;
   right: 0;
   z-index: 1;
@@ -78,8 +77,13 @@ nav li form {
   box-shadow: -2px 0px 8px rgb(163, 163, 163);
   display: none;
   flex-direction: column;
-  align-items: flex-start;
   backdrop-filter: blur(40px);
+}
+
+.cross-icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .burger-icon {
@@ -100,6 +104,8 @@ nav li form {
 }
 
 .search-bar input {
+  width: 100%;
+  display: flex;
   background: transparent;
   outline: none;
   border: none;
