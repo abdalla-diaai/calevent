@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -66,6 +67,20 @@
       <h3 class="month">September</h3>
       <button class="dropdown">></button>
     </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <title>Calevent</title>
+  </head>
+
 
     <div class="month-card">
       <h3 class="month">October</h3>
@@ -86,7 +101,18 @@
   <body>
     <nav>
       <ul class="sidebar">
-        <li>Calevent</li>
+        <li class="cross-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 -960 960 960"
+            width="24"
+          >
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            />
+          </svg>
+        </li>
         <li><a href="#">Categories</a></li>
         <li><a href="#">Location</a></li>
         <li><a href="#">About</a></li>
@@ -102,21 +128,95 @@
       </ul>
 
       <ul>
-        <li>Calevent</li>
-        <li><a href="#">Categories</a></li>
-        <li><a href="#">Location</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li class="appName">Cal<span class="appNameDecoration">event</span></li>
+        <li class="hide-nav-bar"><a href="#">Categories</a></li>
+        <li class="hide-nav-bar"><a href="#">Location</a></li>
+        <li class="hide-nav-bar"><a href="#">About</a></li>
+        <li class="hide-nav-bar"><a href="#">Contact Us</a></li>
         <li class="search-container">
-          <form class="search-bar">
+          <form class="search-bar hide-nav-bar">
             <input type="text" name="search-box" id="" placeholder="Search" />
             <button type="submit" form="search-button">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </form>
         </li>
+        <li class="burger-icon">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26"
+              viewBox="0 -960 960 960"
+              width="26"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg></a>
+        </li>
       </ul>
     </nav>
+
+    <div class="month-container">
+      <div class="month-card january">
+        <h3 class="month">January</h3>
+        <button class="dropdown">></button>
+      </div>
+
+      <div class="month-card february">
+        <h3 class="month">February</h3>
+        <button class="dropdown">></button>
+      </div>
+
+      <div class="month-card march">
+        <h3 class="month">March</h3>
+        <button class="dropdown">></button>
+      </div>
+
+      <div class="month-card">
+        <h3 class="month">April</h3>
+        <button class="dropdown">></button>
+      </div>
+
+      <div class="month-card">
+        <h3 class="month">May</h3>
+        <button class="dropdown">></button>
+      </div>
+
+      <div class="month-card">
+        <h3 class="month">June</h3>
+        <button class="dropdown">></button>
+      </div>
+
+      <div class="month-card">
+        <h3 class="month">July</h3>
+        <button class="dropdown">></button>
+      </div>
+
+      <div class="month-card">
+        <h3 class="month">August</h3>
+        <button class="dropdown">></button>
+      </div>
+
+      <div class="month-card">
+        <h3 class="month">September</h3>
+        <button class="dropdown">></button>
+      </div>
+
+      <div class="month-card">
+        <h3 class="month">October</h3>
+        <button class="dropdown">></button>
+      </div>
+
+      <div class="month-card">
+        <h3 class="month">November</h3>
+        <button class="dropdown">></button>
+      </div>
+
+      <div class="month-card">
+        <h3 class="month">December</h3>
+        <button class="dropdown">></button>
+      </div>
+    </div>
 
     <!-- footer -->
     <footer>
