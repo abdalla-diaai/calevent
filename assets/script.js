@@ -3,10 +3,10 @@ apiKey = "hA8Tg18Yh6X3uiQW5tD5GjoRkXjrJlsl";
 queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?&apikey=${apiKey}`;
 
 // to solve CORS issues
-const url = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + queryUrl
+const TicketUrl = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + queryUrl
 
 function ticketFetch() {
-  fetch(url)
+  fetch(TicketUrl)
     .then(function (response) {
       return response.json();
     })
@@ -48,9 +48,9 @@ ticketFetch();
 // jokes fetch
 
 var jokesUrl = 'https://official-joke-api.appspot.com/random_joke'
-
+var jokesUpdatedUrl = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + jokesUrl
 function jokeFetch() {
-    fetch(jokesUrl)
+    fetch(jokesUpdatedUrl)
       .then(function (response) {
         return response.json();
       })
