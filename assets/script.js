@@ -75,5 +75,5 @@ const crossIcon = document.querySelector(".cross-icon svg");
 crossIcon.addEventListener("click", function () {
   const sideBar = document.querySelector(".sidebar");
   sideBar.style.display = "none";
+caroselFetch
 });
-
