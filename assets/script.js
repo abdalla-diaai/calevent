@@ -1,3 +1,7 @@
+const burgerMenu = document.querySelector(".burger-icon svg");
+const crossIcon = document.querySelector(".cross-icon svg");
+const sideBar = document.querySelector(".sidebar");
+
 apiKey = "hA8Tg18Yh6X3uiQW5tD5GjoRkXjrJlsl";
 
 queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${apiKey}`;
@@ -59,16 +63,10 @@ function ticketFetch() {
 
 ticketFetch();
 
-const burgerMenu = document.querySelector(".burger-icon svg");
-
 burgerMenu.addEventListener("click", function () {
-  const sideBar = document.querySelector(".sidebar");
   sideBar.style.display = "flex";
 });
 
-const crossIcon = document.querySelector(".cross-icon svg");
-
 crossIcon.addEventListener("click", function () {
-  const sideBar = document.querySelector(".sidebar");
   sideBar.style.display = "none";
 });

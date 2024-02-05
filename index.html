@@ -15,7 +15,9 @@
   </head>
 
   <body>
+    <!-- Navigation bar -->
     <nav>
+      <!-- sidebar with the svg X icon and the links with search function -->
       <ul class="sidebar">
         <li class="cross-icon">
           <svg
@@ -35,7 +37,12 @@
         <li><a href="#">Contact Us</a></li>
         <li class="search-container">
           <form class="search-bar">
-            <input type="text" name="search-box" id="" placeholder="Search" />
+            <input
+              type="text"
+              name="search-box"
+              id="nav-search"
+              placeholder="Search"
+            />
             <button type="submit" form="search-button">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
@@ -43,6 +50,7 @@
         </li>
       </ul>
 
+      <!-- full sized navbar with links and burger icon when on smaller screen size -->
       <ul>
         <li class="appName">Cal<span class="appNameDecoration">event</span></li>
         <li class="hide-nav-bar"><a href="#">Categories</a></li>
@@ -51,7 +59,12 @@
         <li class="hide-nav-bar"><a href="#">Contact Us</a></li>
         <li class="search-container">
           <form class="search-bar hide-nav-bar">
-            <input type="text" name="search-box" id="" placeholder="Search" />
+            <input
+              type="text"
+              name="search-box"
+              id="nav-search"
+              placeholder="Search"
+            />
             <button type="submit" form="search-button">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
@@ -77,79 +90,71 @@
 
     <!-- My Form and the right the right side meme generator etc -->
 
-    <div class="form-search-container">
+    <!-- Advance search form. -->
+    <div class="form-result-container">
       <div class="search-results-row">
-        <div class="search-criteria"></div>
-        <div class="meme-table"></div>
+        <div class="advance-search-container">
+          <div class="form-title">Event Search</div>
+          <form action="">
+            <div class="user-inputs">
+              <div class="input-field">
+                <label for="form-keyword" class="details">Keyword</label>
+                <input
+                  type="text"
+                  name="form-keyword"
+                  placeholder="Enter Keyword Here"
+                  required
+                  id="search-keyword"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="form-date" class="details">Date</label>
+                <input
+                  type="text"
+                  name="form-date"
+                  placeholder="Enter a date"
+                  id="search-date"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="form-city" class="details">City</label>
+                <input
+                  type="text"
+                  name="form-city"
+                  placeholder="Enter a city"
+                  id="search-city"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="form-country" class="details">Country</label>
+                <input
+                  type="text"
+                  name="form-country"
+                  value="UK"
+                  readonly
+                  id="default-country"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="meme-table">
+          <div id="results-table">
+            <!-- search results table here -->
+            <h2>RESULTS</h2>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div id="results-table">
-      <!-- search results table here -->
-      <h2>RESULTS</h2>
-    </div>
-
-    <div class="month-container">
-      <div class="month-card january">
-        <h3 class="month">January</h3>
-        <button class="dropdown">></button>
-      </div>
-
-      <div class="month-card february">
-        <h3 class="month">February</h3>
-        <button class="dropdown">></button>
-      </div>
-
-      <div class="month-card march">
-        <h3 class="month">March</h3>
-        <button class="dropdown">></button>
-      </div>
-
-      <div class="month-card">
-        <h3 class="month">April</h3>
-        <button class="dropdown">></button>
-      </div>
-
-      <div class="month-card">
-        <h3 class="month">May</h3>
-        <button class="dropdown">></button>
-      </div>
-
-      <div class="month-card">
-        <h3 class="month">June</h3>
-        <button class="dropdown">></button>
-      </div>
-
-      <div class="month-card">
-        <h3 class="month">July</h3>
-        <button class="dropdown">></button>
-      </div>
-
-      <div class="month-card">
-        <h3 class="month">August</h3>
-        <button class="dropdown">></button>
-      </div>
-
-      <div class="month-card">
-        <h3 class="month">September</h3>
-        <button class="dropdown">></button>
-      </div>
-
-      <div class="month-card">
-        <h3 class="month">October</h3>
-        <button class="dropdown">></button>
-      </div>
-
-      <div class="month-card">
-        <h3 class="month">November</h3>
-        <button class="dropdown">></button>
-      </div>
-
-      <div class="month-card">
-        <h3 class="month">December</h3>
-        <button class="dropdown">></button>
-      </div>
-    </div>
+    <!-- <div id="results-table"> -->
+    <!-- search results table here -->
+    <!-- <h2>RESULTS</h2>
+    </div> -->
 
     <!-- footer -->
     <footer>
