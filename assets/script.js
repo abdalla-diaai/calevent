@@ -1,4 +1,4 @@
- 
+
 
 // queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=uk&apikey=${apiKey}`;
 
@@ -12,15 +12,11 @@
 // keyword = keyword=football
 // keyword = keyword=football
 
-var date;
-var city;
-var searchTerm;
-apiKey = "hA8Tg18Yh6X3uiQW5tD5GjoRkXjrJlsl";
+var date; //startDateTime
+var city; //city
+var searchTerm; //keyword
+var apiKey = "hA8Tg18Yh6X3uiQW5tD5GjoRkXjrJlsl";
 
-queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=UK&apikey=${apiKey}`;
-
-// to solve CORS issues
-const TicketUrl = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + queryUrl
 
 
 var searchInput = "";
@@ -32,23 +28,36 @@ $(".clear").click(function () {
   $("#results-table").empty();
 })
 
-$("search-input").on("click", function () {
+$("#search-form").on("submit", function (event) {
+  event.preventDefault();
   $("#results-table").empty();
   resultsTable = 0;
   searchInput = $("#search-input").val();
-  searchUrl = queryUrl + "q=" + searchInput;
+  ticketFetch(searchInput);
 
 });
 
-var searchUrl = queryUrl + "q=" + searchInput;
 
-function ticketFetch() {
+
+function ticketFetch(keyword, city,) {
+  var queryParams = {
+    apikey: apiKey,
+    countryCode: "UK"
+  }
+  if (keyword) {
+    queryParams.keyword = keyword
+  }
+  console.log(queryParams)
+  var queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?${new URLSearchParams(queryParams)}` //keyword=${keyword}&city=&startDateTime=&countryCode=UK&apikey=${apiKey}`;
   fetch(queryUrl)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
       console.log("query url:", data);
+      if (!data._embedded) {
+        return
+      }
       //   create table element to display search results
       var resultsTable = $("<table/>");
       var headerRow = $("<tr/>");
@@ -59,7 +68,7 @@ function ticketFetch() {
       headerRow.append($("<th>").text("Save"));
 
       // create table rows, text value will be changed later to show results data
-      for (var i = 0; i < 10; i++) {
+      for (var i = 0; i < data._embedded.events.length; i++) {
         var tableRow = $("<tr/>");
         tableRow.append($("<td>").text(data._embedded.events[i].name));
         tableRow.append($("<td>").text(data._embedded.events[i]._embedded.venues[0].name));
@@ -114,6 +123,6 @@ const crossIcon = document.querySelector(".cross-icon svg");
 crossIcon.addEventListener("click", function () {
   const sideBar = document.querySelector(".sidebar");
   sideBar.style.display = "none";
-caroselFetch
+  caroselFetch
 });
 
