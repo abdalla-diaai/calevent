@@ -1,17 +1,55 @@
+ 
+
+// queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=uk&apikey=${apiKey}`;
+
+// var keyword = "taylor swift"; // Example keyword
+// var city = "London";
+// var startEndDateTime = "22/06/2024";
+
+// start date = startDateTime=2024-03-01T10:00:00Z
+// country = countryCode=UK
+// keyword = keyword=football
+// keyword = keyword=football
+// keyword = keyword=football
+
+var date;
+var city;
+var searchTerm;
 apiKey = "hA8Tg18Yh6X3uiQW5tD5GjoRkXjrJlsl";
 
-queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?&apikey=${apiKey}`;
+queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=UK&apikey=${apiKey}`;
 
 // to solve CORS issues
 const TicketUrl = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + queryUrl
 
+
+var searchInput = "";
+var resultsTable = 0;
+
+$(".clear").click(function () {
+  resultsTable = 0;
+  $("#search-input").val("");
+  $("#results-table").empty();
+})
+
+$("search-input").on("click", function () {
+  $("#results-table").empty();
+  resultsTable = 0;
+  searchInput = $("#search-input").val();
+  searchUrl = queryUrl + "q=" + searchInput;
+
+});
+
+var searchUrl = queryUrl + "q=" + searchInput;
+
 function ticketFetch() {
-  fetch(TicketUrl)
+  fetch(queryUrl)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-    //   create table element to display search results
+      console.log("query url:", data);
+      //   create table element to display search results
       var resultsTable = $("<table/>");
       var headerRow = $("<tr/>");
       headerRow.append($("<th>").text("Event"));
@@ -28,9 +66,9 @@ function ticketFetch() {
         tableRow.append($("<td>").text(data._embedded.events[i].dates.start.localDate));
         // check if price is available or not available if not
         try {
-            tableRow.append($("<td>").text(`$${data._embedded.events[i].priceRanges[0].min}`));
-        } catch(err) {
-            tableRow.append($("<td>").text('Not Available'))
+          tableRow.append($("<td>").text(`$${data._embedded.events[i].priceRanges[0].min}`));
+        } catch (err) {
+          tableRow.append($("<td>").text('Not Available'))
         }
         resultsTable.append(tableRow);
       }
@@ -45,20 +83,21 @@ function ticketFetch() {
 
 ticketFetch();
 
+
 // jokes fetch
 
 var jokesUrl = 'https://official-joke-api.appspot.com/random_joke'
 var jokesUpdatedUrl = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + jokesUrl
 function jokeFetch() {
-    fetch(jokesUpdatedUrl)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        document.querySelector('.accordion-button').innerHTML = data.setup;
-        document.querySelector('.accordion-body').innerHTML = data.punchline;
-      });
-  }
+  fetch(jokesUpdatedUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector('.accordion-button').innerHTML = data.setup;
+      document.querySelector('.accordion-body').innerHTML = data.punchline;
+    });
+}
 
 jokeFetch()
 
@@ -77,3 +116,4 @@ crossIcon.addEventListener("click", function () {
   sideBar.style.display = "none";
 caroselFetch
 });
+
