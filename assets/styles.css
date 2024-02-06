@@ -117,7 +117,7 @@ nav li form {
 
 #hero_title {
   text-align: center;
-  color: darkblue;
+  color: lightgreen;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -130,48 +130,119 @@ nav li form {
   left: 0;
 }
 
-.month-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+/* carousel css*/
+
+.carousel{
+    display: flex;
+    height: 600px;
+    margin-top: 100px;
 }
 
-.month-card {
-  text-align: left;
+.hide{
+    display: none  !important;
+}
+
+.carousel-title{
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    margin-top: -70px;
+}
+
+.carousel-right-button, .carousel-left-button{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    align-self: center;
+    background-color: rgba(56, 56, 56, 0.3);
+    cursor: pointer;
+    z-index: 2;
+    border: none;
+}
+
+.carousel-left-button{
+    left: 20px;
+}
+
+.carousel-right-button{
+    right: 20px;
+}
+
+.carousel-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    background-color: rgb(177, 155, 226);
+    flex: 1;
+}
+
+.carousel-card-image{
+    align-self: center;
+}
+
+.carousel-detail{
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.save-event-detail{
+    position: relative;
+    top: 190px;
+    width: 160px;
+    align-self: center;
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 9px 14px;
+    border-radius: 20px;
+}
+
+#carousel-2{
   background-color: aquamarine;
-  width: 500px;
-  height: 400px;
-  margin-left: 10px;
-  margin-top: 40px;
 }
 
-.month {
-  display: inline;
-  font-size: 40px;
+#carousel-3{
+  background-color: brown;
 }
 
-.dropdown {
-  height: 20px;
-  display: inline;
-  background-color: transparent;
-  font-size: 28px;
-  padding-bottom: 30px;
+#carousel-4{
+  background-color: bisque;
+}
+
+.carousel-dot-container{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  align-self: flex-end;
+  padding: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-dot{
+  margin: 0;
+  margin-right: 7px;
+  margin-left: 7px;
+  align-self: center;
+  background-color: rgba(56, 56, 56, 0.6);
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  cursor: pointer;
 }
 
-.january {
-  background-color: rgb(219, 152, 219);
+.carousel-active-dot{
+  width: 10px;
+  height: 10px;
+  background-color: black;
 }
-
-.february {
-  background-color: rgb(245, 237, 122);
-}
-
-.march {
-  background-color: rgb(182, 182, 248);
-}
+/*carousel css ends here */
 
 @media (max-width: 950px) {
   .hide-nav-bar {
