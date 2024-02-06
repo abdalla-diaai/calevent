@@ -1,5 +1,13 @@
+const burgerMenu = document.querySelector(".burger-icon svg");
+const crossIcon = document.querySelector(".cross-icon svg");
+const sideBar = document.querySelector(".sidebar");
+
+apiKey = "hA8Tg18Yh6X3uiQW5tD5GjoRkXjrJlsl";
 
 
+
+// to solve CORS issues
+const TicketUrl = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + queryUrl;
 // queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=uk&apikey=${apiKey}`;
 
 // var keyword = "taylor swift"; // Example keyword
@@ -54,6 +62,7 @@ function ticketFetch(keyword, city,) {
       return response.json();
     })
     .then(function (data) {
+      //   create table element to display search results
 
       var resultsTable = $("<table/>");
       var headerRow = $("<tr/>");
@@ -73,10 +82,19 @@ function ticketFetch(keyword, city,) {
         var formattedPrice = "$" + eventPrice.toFixed(2);
         tableRow.append($("<td>").text(formattedPrice));
         tableRow.append($("<td>").text(data._embedded.events[i].name));
-        tableRow.append($("<td>").text(data._embedded.events[i]._embedded.venues[0].name));
-        tableRow.append($("<td>").text(data._embedded.events[i].dates.start.localDate));
+        tableRow.append(
+          $("<td>").text(data._embedded.events[i]._embedded.venues[0].name)
+        );
+        tableRow.append(
+          $("<td>").text(data._embedded.events[i].dates.start.localDate)
+        );
         // check if price is available or not available if not
         try {
+          tableRow.append(
+            $("<td>").text(`$${data._embedded.events[i].priceRanges[0].min}`)
+          );
+        } catch (err) {
+          tableRow.append($("<td>").text("Not Available"));
           tableRow.append($("<td>").text(`$${data._embedded.events[i].priceRanges[0].min}`));
         } catch (err) {
           tableRow.append($("<td>").text('Not Available'))
@@ -95,6 +113,7 @@ function ticketFetch(keyword, city,) {
 ticketFetch();
 
 
+
 // jokes fetch
 
 var jokesUrl = 'https://official-joke-api.appspot.com/random_joke'
@@ -105,26 +124,20 @@ function jokeFetch() {
       return response.json();
     })
     .then(function (data) {
-      document.querySelector('.accordion-button').innerHTML = data.setup;
-      document.querySelector('.accordion-body').innerHTML = data.punchline;
+      document.querySelector(".accordion-button").innerHTML = data.setup;
+      document.querySelector(".accordion-body").innerHTML = data.punchline;
     });
 }
-
-jokeFetch()
-
-
-const burgerMenu = document.querySelector(".burger-icon svg");
+      
+jokeFetch();
 
 burgerMenu.addEventListener("click", function () {
-  const sideBar = document.querySelector(".sidebar");
   sideBar.style.display = "flex";
 });
 
-const crossIcon = document.querySelector(".cross-icon svg");
-
 crossIcon.addEventListener("click", function () {
-  const sideBar = document.querySelector(".sidebar");
   sideBar.style.display = "none";
+
   caroselFetch
 });
 

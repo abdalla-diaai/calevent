@@ -1,12 +1,16 @@
+/* set variables */
 :root {
   --purpleColor: rgba(117, 85, 190, 0.8);
 }
 
+/* sets default browser sizing */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* set the name Calevent size and where it is placed. */
 .appName {
   font-size: 1.5rem;
   font-weight: 500;
@@ -14,15 +18,18 @@
   align-items: center;
 }
 
+/* Changes the event part of the name Calevent to desired color */
 .appNameDecoration {
   color: var(--purpleColor);
 }
 
+/* sets the navbar background and the box shadow */
 nav {
   background-color: white;
   box-shadow: 4px 4px 5px rgba(46, 46, 46, 0.2);
 }
 
+/* sets the ul to flex and justify content to end on the right with no list style bullet points */
 nav ul {
   width: 100%;
   list-style: none;
@@ -30,6 +37,7 @@ nav ul {
   justify-content: flex-end;
 }
 
+/* aligning the lists and removed the underline link decoration */
 nav li {
   height: 70px;
   align-items: center;
@@ -38,6 +46,7 @@ nav li {
   text-decoration: none;
 }
 
+/* changed the color of the link to black and flex aligned them center */
 nav a {
   height: 100%;
   display: flex;
@@ -46,6 +55,7 @@ nav a {
   text-decoration: none;
 }
 
+/* hover effect for it to go purple and underlined to the same color */
 nav a:hover {
   color: var(--purpleColor);
   text-decoration: underline;
@@ -53,16 +63,19 @@ nav a:hover {
   text-underline-offset: 8px;
 }
 
+/* setting the search form to be flex and center */
 nav li form {
   display: flex;
   align-items: center;
 }
 
+/* setting color of the placeholder */
 .search-container input::placeholder {
   padding: 0 10px;
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* setting properties when the sidebar is active */
 .sidebar {
   position: fixed;
   min-height: 450px;
@@ -77,20 +90,24 @@ nav li form {
   backdrop-filter: blur(40px);
 }
 
+/* puts the X icon to the right */
 .cross-icon {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
+/* setting the burger icon to be not displayed and only active through JS */
 .burger-icon {
   display: none;
 }
 
+/* changing the cursor */
 .sidebar svg {
   cursor: pointer;
 }
 
+/* changing form of the search that covers the input field to the color and rounded off edges */
 .search-bar {
   width: 100%;
   background: rgba(117, 85, 190, 0.5);
@@ -100,6 +117,7 @@ nav li form {
   padding: 5px 10px;
 }
 
+/* making the actual input field transparent */
 .search-bar input {
   width: 100%;
   display: flex;
@@ -108,6 +126,7 @@ nav li form {
   border: none;
 }
 
+/* desgin and rounding of the search button */
 .search-bar button {
   border: none;
   border-radius: 50%;
@@ -244,6 +263,93 @@ nav li form {
 }
 /*carousel css ends here */
 
+/* the row to the form and search results to flex */
+.search-results-row {
+  display: flex;
+}
+
+/* setting the sizing and the color of the advance search box */
+.advance-search-container {
+  background: linear-gradient(
+    130deg,
+    rgb(246, 232, 255),
+    rgba(65, 175, 209, 0.452)
+  );
+  max-width: 300px;
+  width: 100%;
+  padding: 20px 20px;
+  margin: 20px 20px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px rgba(204, 204, 204, 0.61);
+}
+
+/* sizing of the title of the form and properties so the underline works */
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  padding-bottom: 3px;
+  position: relative;
+}
+
+/* the underlining element underneath the title */
+.form-title::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 140px;
+  bottom: 0;
+  background: linear-gradient(to right, var(--purpleColor), rgb(107, 199, 230));
+}
+
+/* sets spacing between the columns in the form */
+.advance-search-container form .user-inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 25px 0 8px 0;
+}
+
+/* gives margin to the label */
+.details {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* margin bottom on the input field so gives spacing between next line */
+form .user-inputs .input-field {
+  margin-bottom: 15px;
+}
+
+/* sets the input field and the border to it with transition when it is in focus*/
+.user-inputs .input-field input {
+  height: 40px;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 5px;
+  padding-left: 10px;
+  border-width: 0 0 2px 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* highlights the border when user is in that input box */
+.user-inputs .input-field input:focus {
+  border-color: var(--purpleColor);
+}
+
+.meme-table {
+  display: flex;
+  margin: 20px 20px;
+}
+
+.results-table {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* hides the sidebar when it is under 950px and then displays the burger icon */
 @media (max-width: 950px) {
   .hide-nav-bar {
     display: none;
@@ -252,7 +358,7 @@ nav li form {
     display: block;
   }
 }
-
+/* turns the sidebar to 100% when it is blow 500px */
 @media (max-width: 500px) {
   .sidebar {
     width: 100%;
