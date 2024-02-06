@@ -187,3 +187,7 @@ nav li form {
     width: 100%;
   }
 }
+
+#attraction-panel {
+  display:none;
+}
