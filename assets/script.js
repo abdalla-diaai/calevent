@@ -7,7 +7,7 @@ apiKey = "hA8Tg18Yh6X3uiQW5tD5GjoRkXjrJlsl";
 
 
 // to solve CORS issues
-const TicketUrl = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + queryUrl;
+// const TicketUrl = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + queryUrl;
 // queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=uk&apikey=${apiKey}`;
 
 // var keyword = "taylor swift"; // Example keyword
@@ -95,9 +95,6 @@ function ticketFetch(keyword, city,) {
           );
         } catch (err) {
           tableRow.append($("<td>").text("Not Available"));
-          tableRow.append($("<td>").text(`$${data._embedded.events[i].priceRanges[0].min}`));
-        } catch (err) {
-          tableRow.append($("<td>").text('Not Available'))
         }
         resultsTable.append(tableRow);
       }
