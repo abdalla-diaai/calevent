@@ -1,27 +1,71 @@
 const burgerMenu = document.querySelector(".burger-icon svg");
 const crossIcon = document.querySelector(".cross-icon svg");
-const sideBar = document.querySelector(".sidebar");
+// const sideBar = document.querySelector(".sidebar");
 
 var apiKey = "hA8Tg18Yh6X3uiQW5tD5GjoRkXjrJlsl";
 
-$("#search-form").on("submit", function (event) {
+$("#search-button").on("click", function (event) {
   event.preventDefault();
   $("#table-body").empty();
   resultsTable = 0;
-  searchGenre = $("#search-keyword").val();
-  searchDate = $("#search-date").val();
-  searchCity = $("#search-city").val();
+  var searchGenre = $("#search-keyword").val();
+  var searchDate = $("#search-date").val();
+  var searchCity = $("#search-city").val();
+  console.log(searchGenre)
+  if (searchGenre === "") {
+    var queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?city=${searchCity}&startDateTime=${searchDate}T10:00:00Z&countryCode=us&apikey=${apiKey}`;
+  }
+  else {
+    var queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=${searchGenre}&city=${searchCity}&startDateTime=${searchDate}T10:00:00Z&countryCode=GB&apikey=${apiKey}`;
+  }
+  fetch(queryUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+     console.log(data)
+      if (!data) {
+        console.log("word")
+      }
+      else {
+        for (var i = 0; i < data._embedded.events.length; i++) {
+          var tableRow = $("<tr/>");
+          tableRow.append($("<td>").text(data._embedded.events[i].name));
+          tableRow.append(
+            $("<td>").text(data._embedded.events[i].dates.start.localDate)
+          );
+          tableRow.append(
+            $("<td>").text(data._embedded.events[i]._embedded.venues[0].name)
+          );
 
-  ticketFetch();
+          // check if price is available or not available if not
+          try {
+            // add format to change form $ to £
+            tableRow.append(
+              $("<td>").text(`$${data._embedded.events[i].priceRanges[0].min}`)
+            );
+          } catch (err) {
+            tableRow.append($("<td>").text("Not Available"));
+          }
+          $("#table-body").append(tableRow);
+        }
+      }
+      // create table rows, text value will be changed later to show results data
+
+    });
+
+  // ticketFetch();
+
   $("#search-city").val("");
   $("#search-date").val("");
   $("#search-keyword").val("");
+
+
+
 });
 
 
 function ticketFetch() {
-
-  console.log(queryParams)
   var queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?keyword=${searchGenre}&city=${searchCity}&startDateTime=${searchDate}&countryCode=GB&apikey=${apiKey}`;
   fetch(queryUrl)
     .then(function (response) {
@@ -55,20 +99,20 @@ function ticketFetch() {
 
 // jokes fetch
 
-var jokesUrl = 'https://official-joke-api.appspot.com/random_joke'
-var jokesUpdatedUrl = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + jokesUrl
-function jokeFetch() {
-  fetch(jokesUpdatedUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      document.querySelector(".accordion-button").innerHTML = data.setup;
-      document.querySelector(".accordion-body").innerHTML = data.punchline;
-    });
-}
+// var jokesUrl = 'https://official-joke-api.appspot.com/random_joke'
+// var jokesUpdatedUrl = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + jokesUrl
+// function jokeFetch() {
+//   fetch(jokesUpdatedUrl)
+//     .then(function (response) {
+//       return response.json();
+//     })
+//     .then(function (data) {
+//       document.querySelector(".accordion-button").innerHTML = data.setup;
+//       document.querySelector(".accordion-body").innerHTML = data.punchline;
+//     });
+// }
 
-jokeFetch();
+// jokeFetch();
 
 burgerMenu.addEventListener("click", function () {
   sideBar.style.display = "flex";
