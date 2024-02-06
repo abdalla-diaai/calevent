@@ -1,266 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
     <title>Calevent</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Navigation bar -->
     <nav>
-      <!-- sidebar with the svg X icon and the links with search function -->
-      <ul class="sidebar">
-        <li class="cross-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24"
-            viewBox="0 -960 960 960"
-            width="24"
-          >
-            <path
-              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-            />
-          </svg>
-        </li>
-        <li><a href="#">Categories</a></li>
-        <li><a href="#">Location</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li class="search-container">
-          <form class="search-bar">
-            <input
-              type="text"
-              name="search-box"
-              id="nav-search"
-              placeholder="Search"
-            />
-            <button type="submit" form="search-button">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </form>
-        </li>
-      </ul>
+        <!-- sidebar with the svg X icon and the links with search function -->
+        <ul class="sidebar">
+            <li class="cross-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Location</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li class="search-container">
+                <form class="search-bar">
+                    <input type="text" name="search-box" id="nav-search" placeholder="Search" />
+                    <button type="submit" form="search-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </li>
+        </ul>
 
-      <!-- full sized navbar with links and burger icon when on smaller screen size -->
-      <ul>
-        <li class="appName">Cal<span class="appNameDecoration">event</span></li>
-        <li class="hide-nav-bar"><a href="#">Categories</a></li>
-        <li class="hide-nav-bar"><a href="#">Location</a></li>
-        <li class="hide-nav-bar"><a href="#">About</a></li>
-        <li class="hide-nav-bar"><a href="#">Contact Us</a></li>
-        <li class="search-container">
-          <form class="search-bar hide-nav-bar">
-            <input
-              type="text"
-              name="search-box"
-              id="nav-search"
-              placeholder="Search"
-            />
-            <button type="submit" form="search-button">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </form>
-        </li>
-        <li class="burger-icon">
-          <a href="#"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="26"
-              viewBox="0 -960 960 960"
-              width="26"
-            >
-              <path
-                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-              /></svg
-          ></a>
-        </li>
-      </ul>
+        <!-- full sized navbar with links and burger icon when on smaller screen size -->
+        <ul>
+            <li class="appName">Cal<span class="appNameDecoration">event</span></li>
+            <li class="hide-nav-bar"><a href="#">Categories</a></li>
+            <li class="hide-nav-bar"><a href="#">Location</a></li>
+            <li class="hide-nav-bar"><a href="#">About</a></li>
+            <li class="hide-nav-bar"><a href="#">Contact Us</a></li>
+            <li class="search-container">
+                <form class="search-bar hide-nav-bar">
+                    <input type="text" name="search-box" id="nav-search" placeholder="Search" />
+                    <button type="submit" form="search-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </li>
+            <li class="burger-icon">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a>
+            </li>
+        </ul>
     </nav>
 
     <!-- Taha Carousel Code -->
+    <div class="carousel">
+        <div class="carousel-title">MOST POPULAR EVENTS</div>
+        <button onclick="carouselImageChange()" class="carousel-left-button"><i
+                class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-right-button"><i class="fa-solid fa-chevron-right"></i></button>
 
+        <div class="carousel-card">
+            <img class="carousel-card-image" src="" alt="fetched image goes here">
+            <p class="carousel-detail">*Event Detail here</p>
+            <button class="save-event-detail">Save Event Detail</button>
+        </div>
+
+        <div id="carousel-2" class="carousel-card hide">
+            <img class="carousel-card-image" src="" alt="fetched image goes here">
+            <p class="carousel-detail">*Event Detail here</p>
+            <button class="save-event-detail">Save Event Detail</button>
+        </div>
+
+        <div id="carousel-3" class="carousel-card hide">
+            <img class="carousel-card-image" src="" alt="fetched image goes here">
+            <p class="carousel-detail">*Event Detail here</p>
+            <button class="save-event-detail">Save Event Detail</button>
+        </div>
+    </div>
     <!-- My Form and the right the right side meme generator etc -->
 
     <!-- Advance search form. -->
     <div class="form-result-container">
-      <div class="search-results-row">
-        <div class="advance-search-container">
-          <div class="form-title">Event Search</div>
-          <form action="">
-            <div class="user-inputs">
-              <div class="input-field">
-                <label for="form-keyword" class="details">Keyword</label>
-                <input
-                  type="text"
-                  name="form-keyword"
-                  placeholder="Enter Keyword Here"
-                  required
-                  id="search-keyword"
-                />
-              </div>
+        <div class="search-results-row">
+            <div class="advance-search-container">
+                <div class="form-title">Event Search</div>
+                <form action="">
+                    <div class="user-inputs">
+                        <div class="input-field">
+                            <label for="form-keyword" class="details">Keyword</label>
+                            <input type="text" name="form-keyword" placeholder="Enter Keyword Here" required
+                                id="search-keyword" />
+                        </div>
 
-              <div class="input-field">
-                <label for="form-date" class="details">Date</label>
-                <input
-                  type="text"
-                  name="form-date"
-                  placeholder="Enter a date"
-                  id="search-date"
-                />
-              </div>
+                        <div class="input-field">
+                            <label for="form-date" class="details">Date</label>
+                            <input type="text" name="form-date" placeholder="Enter a date" id="search-date" />
+                        </div>
 
-              <div class="input-field">
-                <label for="form-city" class="details">City</label>
-                <input
-                  type="text"
-                  name="form-city"
-                  placeholder="Enter a city"
-                  id="search-city"
-                />
-              </div>
+                        <div class="input-field">
+                            <label for="form-city" class="details">City</label>
+                            <input type="text" name="form-city" placeholder="Enter a city" id="search-city" />
+                        </div>
 
-              <div class="input-field">
-                <label for="form-country" class="details">Country</label>
-                <input
-                  type="text"
-                  name="form-country"
-                  value="UK"
-                  readonly
-                  id="default-country"
-                />
-              </div>
+                        <div class="input-field">
+                            <label for="form-country" class="details">Country</label>
+                            <input type="text" name="form-country" value="UK" readonly id="default-country" />
+                        </div>
+                    </div>
+                </form>
             </div>
-          </form>
+            <div class="meme-table">
+                <div id="results-table">
+                    <!-- search results table here -->
+                    <h2>RESULTS</h2>
+                </div>
+            </div>
         </div>
-
-        <div class="meme-table">
-          <div id="results-table">
-            <!-- search results table here -->
-            <h2>RESULTS</h2>
-          </div>
-    <nav>
-
-    <!-- Taha Carousel Code -->
-
-    <div class="carousel">
-      <div class="carousel-title">MOST POPULAR EVENTS</div>
-      <button onclick="carouselImageChange()" class="carousel-left-button"><i class="fa-solid fa-chevron-left"></i></button>
-      <button class="carousel-right-button"><i class="fa-solid fa-chevron-right"></i></button>
-
-        <div class="carousel-card">
-          <img class="carousel-card-image" src="" alt="fetched image goes here">
-          <p class="carousel-detail">*Event Detail here</p>
-          <button class="save-event-detail">Save Event Detail</button>
-        </div>
-
-        <div id="carousel-2" class="carousel-card hide">
-          <img class="carousel-card-image" src="" alt="fetched image goes here">
-          <p class="carousel-detail">*Event Detail here</p>
-          <button class="save-event-detail">Save Event Detail</button>
-        </div>
-
-        <div id="carousel-3" class="carousel-card hide">
-          <img class="carousel-card-image" src="" alt="fetched image goes here">
-          <p class="carousel-detail">*Event Detail here</p>
-          <button class="save-event-detail">Save Event Detail</button>
-        </div>
-      </div>
     </div>
 
-    <!-- <div id="results-table"> -->
-    <!-- search results table here -->
-    <!-- <h2>RESULTS</h2>
-    </div> -->
+   
 
 
 
-      <!-- footer -->
-      <footer>
-        <hr />
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 footer-cols footer-heading">
-              <h6><i class="fa-solid fa-calendar"></i> CalEvent</h6>
-              <p id="contact-me">
-                <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:hello@calevent.com" id="email"
-                  >hello@calevent.com</a
-                >
-                <br />
-                <i class="fa-solid fa-phone"></i> +44 (0)777 7777 777
-              </p>
-            </div>
-            <div
-              class="col-lg-4 col-md-3 col-sm-3 d-none d-sm-block footer-cols"
-            >
-              <div class="footer-heading">
-                <h6>Address</h6>
-              </div>
-              <address>
-                <i class="fa-solid fa-location-dot"></i> 4 Privet Drive
-                <br />
-                Little Whinging, Surrey
-                <br />
-                WD25 7LR
-                <br />
-                United Kingdom
-              </address>
-            </div>
-            <div class="col-lg-4 col-md-5 col-sm-5 footer-cols">
-              <div class="footer-heading">
-                <h6>Follow us</h6>
-              </div>
-              <ul class="nav" id="social-icons">
-                <li class="nav-item">
-                  <a href="#" class="nav-link"
-                    ><i class="fa-brands fa-twitter fa-lg"></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link"
-                    ><i class="fa-brands fa-facebook fa-lg"></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link"
-                    ><i class="fa-brands fa-instagram fa-lg"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+            <!-- footer -->
+            <footer>
+                <hr />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 footer-cols footer-heading">
+                            <h6><i class="fa-solid fa-calendar"></i> CalEvent</h6>
+                            <p id="contact-me">
+                                <i class="fa-solid fa-envelope"></i>
+                                <a href="mailto:hello@calevent.com" id="email">hello@calevent.com</a>
+                                <br />
+                                <i class="fa-solid fa-phone"></i> +44 (0)777 7777 777
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-md-3 col-sm-3 d-none d-sm-block footer-cols">
+                            <div class="footer-heading">
+                                <h6>Address</h6>
+                            </div>
+                            <address>
+                                <i class="fa-solid fa-location-dot"></i> 4 Privet Drive
+                                <br />
+                                Little Whinging, Surrey
+                                <br />
+                                WD25 7LR
+                                <br />
+                                United Kingdom
+                            </address>
+                        </div>
+                        <div class="col-lg-4 col-md-5 col-sm-5 footer-cols">
+                            <div class="footer-heading">
+                                <h6>Follow us</h6>
+                            </div>
+                            <ul class="nav" id="social-icons">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
 
-      <!-- bootstrap javascript -->
-      <script
-        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"
-      ></script>
-      <!-- font-awesome script -->
-      <script
-        src="https://kit.fontawesome.com/51fc4ce678.js"
-        crossorigin="anonymous"
-      ></script>
-      <!-- javascript file -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="./assets/script.js"></script>
-    </div>
+            <!-- bootstrap javascript -->
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+                integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+                integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+                crossorigin="anonymous"></script>
+            <!-- font-awesome script -->
+            <script src="https://kit.fontawesome.com/51fc4ce678.js" crossorigin="anonymous"></script>
+            <!-- javascript file -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="./assets/script.js"></script>
 
-  </body>
+</body>
+
 </html>
