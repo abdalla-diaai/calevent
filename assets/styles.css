@@ -151,17 +151,17 @@ nav li form {
 
 /* carousel css*/
 
-.carousel{
+.carousel {
   display: flex;
   height: 600px;
   margin-top: 100px;
 }
 
-.hide{
-  display: none  !important;
+.hide {
+  display: none !important;
 }
 
-.carousel-title{
+.carousel-title {
   width: 100%;
   font-size: 40px;
   text-align: center;
@@ -169,7 +169,8 @@ nav li form {
   margin-top: -70px;
 }
 
-.carousel-right-button, .carousel-left-button{
+.carousel-right-button,
+.carousel-left-button {
   position: absolute;
   height: 70px;
   width: 70px;
@@ -181,15 +182,15 @@ nav li form {
   border: none;
 }
 
-.carousel-left-button{
+.carousel-left-button {
   left: 20px;
 }
 
-.carousel-right-button{
+.carousel-right-button {
   right: 20px;
 }
 
-.carousel-card{
+.carousel-card {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -199,17 +200,17 @@ nav li form {
   flex: 1;
 }
 
-.carousel-card-image{
+.carousel-card-image {
   align-self: center;
 }
 
-.carousel-detail{
+.carousel-detail {
   font-size: 20px;
   position: relative;
   z-index: 1;
 }
 
-.save-event-detail{
+.save-event-detail {
   position: relative;
   top: 190px;
   width: 160px;
@@ -221,47 +222,51 @@ nav li form {
   border-radius: 20px;
 }
 
-#carousel-2{
-background-color: aquamarine;
+#carousel-2 {
+  background-color: aquamarine;
 }
 
-#carousel-3{
-background-color: brown;
+#carousel-3 {
+  background-color: brown;
 }
 
-#carousel-4{
-background-color: bisque;
+#carousel-4 {
+  background-color: bisque;
 }
 
-.carousel-dot-container{
-list-style: none;
-display: flex;
-flex-direction: row;
-position: absolute;
-align-self: flex-end;
-padding: 0;
-bottom: 0;
-left: 50%;
-transform: translateX(-50%);
+.carousel-dot-container {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  align-self: flex-end;
+  padding: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.carousel-dot{
-margin: 0;
-margin-right: 7px;
-margin-left: 7px;
-align-self: center;
-background-color: rgba(56, 56, 56, 0.6);
-width: 10px;
-height: 10px;
-border-radius: 50%;
+.carousel-dot {
+  margin: 0;
+  margin-right: 7px;
+  margin-left: 7px;
+  align-self: center;
+  background-color: rgba(56, 56, 56, 0.6);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
 
-.carousel-active-dot{
-width: 10px;
-height: 10px;
-background-color: black;
+.carousel-active-dot {
+  width: 10px;
+  height: 10px;
+  background-color: black;
 }
 /*carousel css ends here */
+
+.form-result-container {
+  display: flex;
+}
 
 /* the row to the form and search results to flex */
 .search-results-row {
@@ -343,10 +348,8 @@ form .user-inputs .input-field {
   margin: 20px 20px;
 }
 
-.results-table {
-  display: flex;
-  width: 100%;
-  flex-grow: 1;
+#results-table thead th {
+  padding: 10px 60px;
 }
 
 /* hides the sidebar when it is under 950px and then displays the burger icon */
@@ -366,5 +369,5 @@ form .user-inputs .input-field {
 }
 
 #attraction-panel {
-  display:none;
+  display: none;
 }
