@@ -183,7 +183,7 @@ carouselRightButton.addEventListener("click", function () {
 
 carouselLeftButton.addEventListener("click", function () {
   if(carouselCurrentIndex === 0){
-    carouselCurrentIndex = 3
+    carouselCurrentIndex = 4
   } else {
     carouselCurrentIndex = (carouselCurrentIndex - 1);
   }

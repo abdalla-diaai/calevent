@@ -233,6 +233,10 @@ background-color: brown;
 background-color: bisque;
 }
 
+#carousel-5{
+  background-color: cadetblue;
+}
+
 .carousel-dot-container{
 list-style: none;
 display: flex;
