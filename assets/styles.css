@@ -265,7 +265,7 @@ nav li form {
 /*carousel css ends here */
 
 .form-result-container {
-  display: flex;
+  margin: 20px 0;
 }
 
 /* the row to the form and search results to flex */
@@ -280,8 +280,7 @@ nav li form {
     rgb(246, 232, 255),
     rgba(65, 175, 209, 0.452)
   );
-  max-width: 300px;
-  width: 100%;
+  max-height: 500px;
   padding: 20px 20px;
   margin: 20px 20px;
   border-radius: 15px;
@@ -343,6 +342,21 @@ form .user-inputs .input-field {
   border-color: var(--purpleColor);
 }
 
+.form-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.form-buttons button {
+  padding: 5px 25px;
+  margin: 0 15px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background: rgb(107, 90, 255);
+  color: white;
+}
+
 .meme-table {
   display: flex;
   margin: 20px 20px;
@@ -350,6 +364,11 @@ form .user-inputs .input-field {
 
 #results-table thead th {
   padding: 10px 60px;
+  align-content: space-between;
+}
+
+.table {
+  margin: 20px 0;
 }
 
 /* hides the sidebar when it is under 950px and then displays the burger icon */
