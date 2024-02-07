@@ -342,6 +342,21 @@ form .user-inputs .input-field {
   border-color: var(--purpleColor);
 }
 
+.form-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.form-buttons button {
+  padding: 5px 25px;
+  margin: 0 15px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background: rgb(107, 90, 255);
+  color: white;
+}
+
 .meme-table {
   display: flex;
   margin: 20px 20px;
@@ -349,11 +364,13 @@ form .user-inputs .input-field {
 
 #results-table thead th {
   padding: 10px 60px;
+  align-content: space-between;
 }
 
 .table {
   margin: 20px 0;
 }
+
 /* hides the sidebar when it is under 950px and then displays the burger icon */
 @media (max-width: 950px) {
   .hide-nav-bar {

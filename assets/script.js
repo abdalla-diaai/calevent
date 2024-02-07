@@ -1,6 +1,7 @@
 const burgerMenu = document.querySelector(".burger-icon svg");
 const crossIcon = document.querySelector(".cross-icon svg");
-// const sideBar = document.querySelector(".sidebar");
+const sideBar = document.querySelector(".sidebar");
+const clearBtn = document.querySelector("#clear-button");
 
 var apiKey = "hA8Tg18Yh6X3uiQW5tD5GjoRkXjrJlsl";
 
@@ -114,6 +115,12 @@ crossIcon.addEventListener("click", function () {
   sideBar.style.display = "none";
 
   caroselFetch;
+});
+
+clearBtn.addEventListener("click", function () {
+  const form = document.querySelector("#search-form");
+
+  form.reset();
 });
 
 //javascript code for carousel buttons
