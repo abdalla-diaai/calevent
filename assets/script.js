@@ -11,11 +11,10 @@ $("#search-button").on("click", function (event) {
   var searchGenre = $("#search-keyword").val();
   var searchDate = $("#search-date").val();
   var searchCity = $("#search-city").val();
-  console.log(searchGenre)
+  console.log(searchGenre);
   if (searchGenre === "") {
     var queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?city=${searchCity}&startDateTime=${searchDate}T10:00:00Z&countryCode=us&apikey=${apiKey}`;
-  }
-  else {
+  } else {
     var queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=${searchGenre}&city=${searchCity}&startDateTime=${searchDate}T10:00:00Z&countryCode=GB&apikey=${apiKey}`;
   }
   fetch(queryUrl)
@@ -23,11 +22,10 @@ $("#search-button").on("click", function (event) {
       return response.json();
     })
     .then(function (data) {
-     console.log(data)
+      console.log(data);
       if (!data) {
-        console.log("word")
-      }
-      else {
+        console.log("word");
+      } else {
         for (var i = 0; i < data._embedded.events.length; i++) {
           var tableRow = $("<tr/>");
           tableRow.append($("<td>").text(data._embedded.events[i].name));
@@ -51,7 +49,6 @@ $("#search-button").on("click", function (event) {
         }
       }
       // create table rows, text value will be changed later to show results data
-
     });
 
   // ticketFetch();
@@ -59,11 +56,7 @@ $("#search-button").on("click", function (event) {
   $("#search-city").val("");
   $("#search-date").val("");
   $("#search-keyword").val("");
-
-
-
 });
-
 
 function ticketFetch() {
   var queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?keyword=${searchGenre}&city=${searchCity}&startDateTime=${searchDate}&countryCode=GB&apikey=${apiKey}`;
@@ -72,7 +65,6 @@ function ticketFetch() {
       return response.json();
     })
     .then(function (data) {
-
       // create table rows, text value will be changed later to show results data
       for (var i = 0; i < data._embedded.events.length; i++) {
         var tableRow = $("<tr/>");
@@ -121,26 +113,25 @@ burgerMenu.addEventListener("click", function () {
 crossIcon.addEventListener("click", function () {
   sideBar.style.display = "none";
 
-  caroselFetch
+  caroselFetch;
 });
 
 //javascript code for carousel buttons
 
-const carouselRightButton = document.querySelector(".carousel-right-button")
-const carouselLeftButton = document.querySelector(".carousel-left-button")
-const carouselImages = document.querySelectorAll(".carousel-card")
-const slider = document.querySelector(".slider")
-const carouselActiveDot = document.querySelectorAll(".carousel-dot")
+const carouselRightButton = document.querySelector(".carousel-right-button");
+const carouselLeftButton = document.querySelector(".carousel-left-button");
+const carouselImages = document.querySelectorAll(".carousel-card");
+const slider = document.querySelector(".slider");
+const carouselActiveDot = document.querySelectorAll(".carousel-dot");
 
-
-let carouselCurrentIndex = 0
+let carouselCurrentIndex = 0;
 
 function carouselImageChange() {
   carouselImages.forEach(function (currentValue, index) {
     if (index === carouselCurrentIndex) {
-      currentValue.classList.remove("hide")
+      currentValue.classList.remove("hide");
     } else {
-      currentValue.classList.add("hide")
+      currentValue.classList.add("hide");
     }
   });
 }
@@ -148,32 +139,29 @@ function carouselImageChange() {
 function handleCarouselDot() {
   carouselActiveDot.forEach(function (currentValue, index) {
     if (index === carouselCurrentIndex) {
-      currentValue.classList.add("carousel-active-dot")
+      currentValue.classList.add("carousel-active-dot");
     } else {
-      currentValue.classList.remove("carousel-active-dot")
+      currentValue.classList.remove("carousel-active-dot");
     }
-  })
+  });
 }
-
-
 
 carouselRightButton.addEventListener("click", function () {
   if (carouselCurrentIndex === carouselImages.length - 1) {
-    carouselCurrentIndex = 0
+    carouselCurrentIndex = 0;
   } else {
-    carouselCurrentIndex = (carouselCurrentIndex + 1);
+    carouselCurrentIndex = carouselCurrentIndex + 1;
   }
   carouselImageChange();
-  handleCarouselDot()
+  handleCarouselDot();
 });
 
 carouselLeftButton.addEventListener("click", function () {
   if (carouselCurrentIndex === 0) {
-    carouselCurrentIndex = 3
+    carouselCurrentIndex = 3;
   } else {
-    carouselCurrentIndex = (carouselCurrentIndex - 1);
+    carouselCurrentIndex = carouselCurrentIndex - 1;
   }
   carouselImageChange();
-  handleCarouselDot()
+  handleCarouselDot();
 });
-
