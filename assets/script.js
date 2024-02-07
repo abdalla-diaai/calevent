@@ -92,20 +92,20 @@ function ticketFetch() {
 
 // jokes fetch
 
-// var jokesUrl = 'https://official-joke-api.appspot.com/random_joke'
-// var jokesUpdatedUrl = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + jokesUrl
-// function jokeFetch() {
-//   fetch(jokesUpdatedUrl)
-//     .then(function (response) {
-//       return response.json();
-//     })
-//     .then(function (data) {
-//       document.querySelector(".accordion-button").innerHTML = data.setup;
-//       document.querySelector(".accordion-body").innerHTML = data.punchline;
-//     });
-// }
+var jokesUrl = 'https://official-joke-api.appspot.com/random_joke'
+var jokesUpdatedUrl = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + jokesUrl
+function jokeFetch() {
+  fetch(jokesUpdatedUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector(".accordion-button").innerHTML = data.setup;
+      document.querySelector(".accordion-body").innerHTML = data.punchline;
+    });
+}
 
-// jokeFetch();
+jokeFetch();
 function suggestFetch(){
 fetch(suggestUrl)
     .then(function (response) {
