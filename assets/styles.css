@@ -203,6 +203,10 @@ nav li form {
 .carousel-card-image {
   align-self: center;
 }
+img{
+height: 427px;
+width: 640px;  
+}
 
 .carousel-detail {
   font-size: 20px;
