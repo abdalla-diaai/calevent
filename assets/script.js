@@ -4,7 +4,7 @@ const sideBar = document.querySelector(".sidebar");
 const clearBtn = document.querySelector("#clear-button");
 
 var apiKey = "hA8Tg18Yh6X3uiQW5tD5GjoRkXjrJlsl";
-
+var suggestUrl = `https://app.ticketmaster.com/discovery/v2/suggest.json?apikey=${apiKey}&countryCode=GB`;
 $("#search-button").on("click", function (event) {
   event.preventDefault();
   $("#table-body").empty();
@@ -106,6 +106,22 @@ function ticketFetch() {
 // }
 
 // jokeFetch();
+function suggestFetch(){
+fetch(suggestUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+   for(var i=0;i<data._embedded.events.length;i++){
+    $(`#event-${i}-image`).attr('src',data._embedded.events[i].images[0].url) 
+    $(`#event-${i}-title`).text(data._embedded.events[i].name)
+    $(`#event-${i}-date`).text(data._embedded.events[i].dates.start.localDate)
+    $(`#event-${i}-url`).attr('href',data._embedded.events[i].url)
+   }
+    }) 
+  }
+ suggestFetch();
 
 burgerMenu.addEventListener("click", function () {
   sideBar.style.display = "flex";
@@ -172,3 +188,4 @@ carouselLeftButton.addEventListener("click", function () {
   carouselImageChange();
   handleCarouselDot();
 });
+
