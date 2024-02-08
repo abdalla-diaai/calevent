@@ -55,7 +55,7 @@ Taha Hadj Lakehal
 
 
 
-DEPLOYED URL - 
+DEPLOYED URL - https://abdalla-diaai.github.io/calevent/
 
 Webpage view
 ![CalEvent Hompage Image](assets/images/CalEvent-screenShot.png)
