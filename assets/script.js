@@ -39,15 +39,23 @@ $("#search-button").on("click", function (event) {
 
           // check if price is available or not available if not
           try {
-            // add format to change form $ to £
-            tableRow.append(
-              $("<td>").text(`$${data._embedded.events[i].priceRanges[0].min}`)
-            );
-          } catch (err) {
-            tableRow.append($("<td>").text("Not Available"));
-          }
-          $("#table-body").append(tableRow);
+            console.log(data._embedded.events[i].priceRanges[0].min)
+            if (parseInt(data._embedded.events[i].priceRanges[0].min) > 0) {
+                tableRow.append(
+                    $("<td>").text(`$${data._embedded.events[i].priceRanges[0].min}`))
+            } else {
+                tableRow.append($("<td>").text("Not Available"));
+
+       
+            }
+
+         }
+         catch (err) {
+          tableRow.append($("<td>").text("Not Available"));
         }
+        $("#table-body").append(tableRow);
+      
+    }
       }
       // create table rows, text value will be changed later to show results data
     });
@@ -79,15 +87,23 @@ function ticketFetch() {
 
         // check if price is available or not available if not
         try {
-          tableRow.append(
-            $("<td>").text(`$${data._embedded.events[i].priceRanges[0].min}`)
-          );
-        } catch (err) {
+            if (data._embedded.events[i].priceRanges[0].min !== 'undefined') {
+                tableRow.append(
+                    $("<td>").text(`$${data._embedded.events[i].priceRanges[0].min}`))
+            } else {
+                tableRow.append($("<td>").text("Not Available"));
+
+       
+            }
+
+         }
+         catch (err) {
           tableRow.append($("<td>").text("Not Available"));
         }
         $("#table-body").append(tableRow);
-      }
-    });
+      
+    }
+});
 }
 
 // jokes fetch
