@@ -31,12 +31,12 @@
             />
           </svg>
         </li>
-        <li><a href="#">Categories</a></li>
-        <li><a href="#">Location</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="#carousel">What's Popular</a></li>
+        <li><a href="#search">Search Event</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#jokes">Jokes</a></li>
         <li class="search-container">
-          <form class="search-bar" action="https://www.google.com/search">
+          <form target="_blank" class="search-bar" action="https://www.google.com/search">
             <input type="text" name="q" id="nav-search" placeholder="Search" />
             <button type="submit" form="search-button">
               <i class="fa-solid fa-magnifying-glass"></i>
@@ -48,12 +48,12 @@
       <!-- full sized navbar with links and burger icon when on smaller screen size -->
       <ul>
         <li class="appName">Cal<span class="appNameDecoration">event</span></li>
-        <li class="hide-nav-bar"><a href="#">Categories</a></li>
-        <li class="hide-nav-bar"><a href="#">Location</a></li>
-        <li class="hide-nav-bar"><a href="#">About</a></li>
-        <li class="hide-nav-bar"><a href="#">Contact Us</a></li>
+        <li class="hide-nav-bar"><a href="#carousel">What's Popular</a></li>
+        <li class="hide-nav-bar"><a href="#search">Search Event</a></li>
+        <li class="hide-nav-bar"><a href="#news">News</a></li>
+        <li class="hide-nav-bar"><a href="#jokes">Jokes</a></li>
         <li class="search-container">
-         <form class="search-bar hide-nav-bar" action="https://google.com/search">
+         <form target="_blank" class="search-bar hide-nav-bar" action="https://google.com/search">
                     <input type="text" name="q" id="nav-search" placeholder="Google Search" />
                     <button type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -70,16 +70,15 @@
             >
               <path
                 d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-              /></svg
-          ></a>
+              /></svg>
+          </a>
         </li>
       </ul>
     </nav>
 
     <!-- Taha Carousel Code -->
 
-    <div class="carousel">
-      <div class="carousel-title">MOST POPULAR EVENTS</div>
+    <div id="carousel" class="carousel">
       <button class="carousel-left-button">
         <i class="fa-solid fa-chevron-left"></i>
       </button>
@@ -95,7 +94,7 @@
           id="event-0-image"
         />
         <p class="carousel-detail" id="event-0-title">*Event Detail here</p>
-        <p class="carousel-detail" id="event-0-date">*Date</p>
+        <p class="carousel-detail carousel-detail-position" id="event-0-date">*Date</p>
         <a id="event-0-url" href="" class="save-event-detail btn btn-primary"
           >More Details</a
         >
@@ -109,7 +108,7 @@
           id="event-1-image"
         />
         <p class="carousel-detail" id="event-1-title">*Event Detail here</p>
-        <p class="carousel-detail" id="event-1-date">*Date</p>
+        <p class="carousel-detail carousel-detail-position" id="event-1-date">*Date</p>
         <a id="event-1-url" href="" class="save-event-detail btn btn-primary"
           >More Details</a
         >
@@ -123,8 +122,8 @@
           id="event-2-image"
         />
         <p class="carousel-detail" id="event-2-title">*Event Detail here</p>
-        <p class="carousel-detail" id="event-2-date">*Date</p>
-        <<a id="event-2-url" href="" class="save-event-detail btn btn-primary"
+        <p class="carousel-detail carousel-detail-position" id="event-2-date">*Date</p>
+        <a id="event-2-url" href="" class="save-event-detail btn btn-primary"
           >More Details</a
         >
       </div>
@@ -137,7 +136,7 @@
           id="event-3-image"
         />
         <p class="carousel-detail" id="event-3-title">*Event Detail here</p>
-        <p class="carousel-detail" id="event-3-date">*Date</p>
+        <p class="carousel-detail carousel-detail-position" id="event-3-date">*Date</p>
         <a id="event-3-url" href="" class="save-event-detail btn btn-primary"
           >More Details</a
         >
@@ -151,7 +150,7 @@
           id="event-4-image"
         />
         <p class="carousel-detail" id="event-4-title">*Event Detail here</p>
-        <p class="carousel-detail" id="event-4-date">*Date</p>
+        <p class="carousel-detail carousel-detail-position" id="event-4-date">*Date</p>
         <a id="event-4-url" href="" class="save-event-detail btn btn-primary"
           >More Details</a
         >
@@ -162,11 +161,14 @@
         <li class="carousel-dot"></li>
         <li class="carousel-dot"></li>
         <li class="carousel-dot"></li>
+        <li class="carousel-dot"></li>
       </ul>
     </div>
     <!-- My Form and the right the right side meme generator etc -->
 
     <!-- Advance search form. -->
+    <h2 id="search" class="upcoming-event-title">SEARCH UPCOMING <span class="appNameDecoration">EVENTS</span></h2>
+
     <div class="form-result-container">
       <div class="search-results-row">
         <div class="advance-search-container">
@@ -188,7 +190,7 @@
                 <input
                   type="text"
                   name="form-date"
-                  placeholder="Enter a date"
+                  placeholder="YYYY-MM-DD"
                   id="search-date"
                 />
               </div>
@@ -220,26 +222,94 @@
             </div>
           </form>
         </div>
+
         <div class="meme-table">
+          
           <div id="results-table">
             <!-- search results table here -->
-            <h2>RESULTS</h2>
+            <h2 class="results">RESULTS</h2>
             <table class="table table-striped">
               <thead>
-                <tr>
+                <tr class="results-headers">
                   <th scope="col-lg-4">Event Name</th>
                   <th scope="col-lg-4">Date</th>
                   <th scope="col-lg-4">Location</th>
                   <th scope="col-lg-4">Price</th>
-                  <th scope="col-lg-4">Email</th>
                 </tr>
               </thead>
               <tbody class="table-group-divider" id="table-body"></tbody>
             </table>
           </div>
         </div>
+        <div class="modal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">No Results</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>No Available Events. Please Change Search Parameters and Try Again!.</p>
+                </div>
+                <div class="modal-footer">
+                  <button id="modal-btn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
+
+        <!--additional information cards-->
+
+        <h2 id="news" class="calevent-feed-title">CAL<span class="appNameDecoration">EVENT</span> NEWS</h2>
+
+        <div class="information-cards-container">
+            <div class="information-cards-row">
+
+                <div class="information-card">
+
+                    <img class="information-card-image" src="assets/images/card1-image.png">
+                    <h6 class="information-card-title">WHO'S THE GREATEST FOOTBALLER?</h6>
+                    <p class="information-card-paragraph football-paragraph">RadioTimes answers football fans most asked question of all time</p>
+                    <button class="find-out-more"><a target="_blank" class="link-learn-more" href="https://www.radiotimes.com/tv/sport/football/best-football-players-world/">Learn More</a></button>
+                </div>
+    
+                <div class="information-card">
+                    
+                    <img class="information-card-image" src="assets/images/card2-image.webp">
+                    <h6 class="information-card-title">THE WORLD OF MAGIC AWAITS YOU AT WIZARD WORLD</h6>
+                    <p class="information-card-paragraph">Explore Wizarding Worlds latest news</p>
+                    <button class="find-out-more wizard-button"><a target="_blank" class="link-learn-more" href="https://www.wizardingworld.com/news">Learn More</a></button>
+                </div>
+
+                <div class="information-card">
+                    <img class="information-card-image" src="assets/images/card3-image.jpg">
+                    <h6 class="information-card-title">KPOP FANS ARE SHOCKED WITH THEIR IDOL'S LATEST DRAMA</h6>
+                    <p class="information-card-paragraph">Catch up with your kpop idol's latest drama</p>
+                    <button class="find-out-more kpop-button"><a target="_blank" class="link-learn-more" href="https://www.koreaboo.com/">Learn More</a></button>
+                </div>
+                
+            </div>
+        
+  <!--jokes form-->
+
+  <h2 id="jokes" class="calevent-feed-title title-adjustment">YOUR DAILY DOSE OF CAL<span class="appNameDecoration">EVENT</span> JOKES</h2>
+
+            <div class="accordion accordion-flush" id="#joke">
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseOne" aria-expanded="false"
+                          aria-controls="flush-collapseOne">
+                      </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#joke">
+                      <div class="accordion-body"></div>
+                  </div>
+              </div>
+          </div>
+
 
     <!-- footer -->
     <footer>
@@ -257,10 +327,10 @@
               <i class="fa-solid fa-phone"></i> +44 (0)777 7777 777
             </p>
           </div>
-          <div class="col-lg-4 col-md-3 col-sm-3 d-none d-sm-block footer-cols">
+          <div class="col-lg-4 col-md-3 col-sm-3 d-none d-sm-block footer-colsp">
+
             <div class="footer-heading">
-              <h6>Address</h6>
-            </div>
+              <h6 class="address">Address</h6>
             <address>
               <i class="fa-solid fa-location-dot"></i> 4 Privet Drive
               <br />
@@ -271,27 +341,30 @@
               United Kingdom
             </address>
           </div>
+          </div>
+
           <div class="col-lg-4 col-md-5 col-sm-5 footer-cols">
+
             <div class="footer-heading">
-              <h6>Follow us</h6>
-            </div>
-            <ul class="nav" id="social-icons">
-              <li class="nav-item">
-                <a href="#" class="nav-link"
-                  ><i class="fa-brands fa-twitter fa-lg"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link"
-                  ><i class="fa-brands fa-facebook fa-lg"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link"
-                  ><i class="fa-brands fa-instagram fa-lg"></i
-                ></a>
-              </li>
-            </ul>
+              <h6 class="follow-us">Follow us</h6>
+                <ul class="nav" id="social-icons">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"
+                      ><i class="fa-brands fa-twitter fa-lg"></i
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"
+                      ><i class="fa-brands fa-facebook fa-lg"></i
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"
+                      ><i class="fa-brands fa-instagram fa-lg"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
           </div>
         </div>
       </div>

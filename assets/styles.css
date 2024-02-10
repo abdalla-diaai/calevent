@@ -12,10 +12,13 @@
 
 /* set the name Calevent size and where it is placed. */
 .appName {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: 500;
   margin-right: auto;
   align-items: center;
+  font-family: Saudagar;
+  font-weight: 500;
+  padding-top: 5px;
 }
 
 /* Changes the event part of the name Calevent to desired color */
@@ -53,6 +56,7 @@ nav a {
   align-items: center;
   color: black;
   text-decoration: none;
+  font-family: Louis-George-Cafe;
 }
 
 /* hover effect for it to go purple and underlined to the same color */
@@ -154,7 +158,7 @@ nav li form {
 .carousel {
   display: flex;
   height: 600px;
-  margin-top: 100px;
+  margin-top: -17px;
 }
 
 .hide {
@@ -196,46 +200,67 @@ nav li form {
   flex-direction: column;
   text-align: center;
   flex-wrap: wrap;
-  background-color: rgb(177, 155, 226);
   flex: 1;
+  background-color: var(--purpleColor);
 }
 
 .carousel-card-image {
   align-self: center;
+  width: 900px;
+  height: 600px;
+  object-fit: cover;
 }
-img{
-height: 427px;
-width: 640px;  
+
+#event-0-title, #event-1-title, #event-2-title, #event-3-title #event-4-title{
+  margin-top: 400px;
+}
+
+#event-3-title{
+  margin-top: 400px;
+}
+
+#event-4-title{
+  margin-top: 400px;
+}
+
+#event-0-date, #event-1-date, #event-2-date, #event-3-date #event-4-date{
+  margin-top: 300px;
+}
+
+#event-3-date{
+  color: white;
+  margin-top: 300px;
+}
+
+#event-4-date{
+  margin-top: 300px;
 }
 
 .carousel-detail {
   font-size: 20px;
-  position: relative;
+  position: absolute;
   z-index: 1;
+  align-self: center;
+  color: white;
+  margin-top: 800px;
+}
+
+.carousel-detail-position{
+  margin-top: 0px;
 }
 
 .save-event-detail {
-  position: relative;
-  top: 190px;
+  position: absolute;
+  top: -10px;
   width: 160px;
   align-self: center;
   color: white;
-  background-color: black;
-  border: none;
-  padding: 9px 14px;
+  background-color: black !important;
+  border: none !important;
+  padding: 4px 10px !important;
   border-radius: 20px;
-}
-
-#carousel-2 {
-  background-color: aquamarine;
-}
-
-#carousel-3 {
-  background-color: brown;
-}
-
-#carousel-4 {
-  background-color: bisque;
+  margin-top: 540px;
+  z-index: 10;
 }
 
 .carousel-dot-container {
@@ -268,8 +293,20 @@ width: 640px;
 }
 /*carousel css ends here */
 
-.form-result-container {
-  margin: 20px 0;
+.upcoming-event-title{
+  text-align: center;
+  margin-top: 100px;
+  font-size: 60px;
+  padding-bottom: 60px;
+  font-family: Louis-George-Cafe;
+}
+
+.form-result-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 /* the row to the form and search results to flex */
@@ -284,9 +321,12 @@ width: 640px;
     rgb(246, 232, 255),
     rgba(65, 175, 209, 0.452)
   );
-  max-height: 500px;
+
+  width: 500px;
+  height: 600px;
   padding: 20px 20px;
-  margin: 20px 20px;
+  margin-left: -100px;
+  margin-right: 100px;
   border-radius: 15px;
   box-shadow: 3px 3px 3px rgba(204, 204, 204, 0.61);
 }
@@ -322,17 +362,19 @@ width: 640px;
 .details {
   margin-bottom: 5px;
   font-weight: 500;
+  display: flex;
 }
 
 /* margin bottom on the input field so gives spacing between next line */
 form .user-inputs .input-field {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 /* sets the input field and the border to it with transition when it is in focus*/
 .user-inputs .input-field input {
   height: 40px;
-  width: 100%;
+  width: 450px;
   outline: none;
   border: 1px solid rgb(212, 212, 212);
   border-radius: 5px;
@@ -341,24 +383,47 @@ form .user-inputs .input-field {
   transition: all 0.3s ease-in-out;
 }
 
+#search-button, #clear-button{
+  border: none;
+  width: 90px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 10px;
+  font-family: Louis-George-Cafe;
+}
+
 /* highlights the border when user is in that input box */
 .user-inputs .input-field input:focus {
   border-color: var(--purpleColor);
 }
 
-.form-buttons {
+.meme-table {
   display: flex;
-  justify-content: center;
+  margin: 20px 20px;
 }
 
-.form-buttons button {
-  padding: 5px 25px;
-  margin: 0 15px;
-  outline: none;
-  border: none;
-  border-radius: 10px;
-  background: rgb(107, 90, 255);
-  color: white;
+.results-table {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.results{
+  text-align: center;
+  margin-top: -20px;
+  font-family: Louis-George-Cafe;
+  font-weight: 600;
+}
+
+.results-headers{
+  margin-left: -100px;
+}
+
+.results-headers th{
+  font-size: 12px;
+  padding-left: 20px !important;
+  padding-right: 30px !important;
+  
 }
 
 .meme-table {
@@ -375,7 +440,169 @@ form .user-inputs .input-field {
   margin: 20px 0;
 }
 
+/*code for information cards */
+.calevent-feed-title{
+  margin-top: 162px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 60px;
+  font-family: Louis-George-Cafe;
+}
+
+.information-cards-container{
+  gap: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.information-cards-row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.information-card{
+  background-color: rgb(121, 121, 121);
+  width: 360px;
+  height: 430px;
+  margin-bottom: 30px;
+  background-color: var(--purpleColor);
+}
+
+.information-card-image{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.information-card:hover{
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.information-card-title{
+  color: white;
+  font-family: Louis-George-Cafe;
+  font-weight: 700;
+  font-size: 21px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.information-card-paragraph{
+  color: white;
+  font-family: Louis-George-Cafe;
+  font-weight: 500;
+  margin-top: 40px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.football-paragraph{
+  margin-top: 40px;
+}
+
+.find-out-more{
+  position: relative;
+  width: 100px;
+  height: 30px;
+  margin-left: 130px;
+  font-size: 15px;
+  border-radius: 10px;
+  border-width: 0;
+  font-family: Louis-George-Cafe;
+  font-weight: 500;
+}
+
+.find-out-more:hover{
+  color: white;
+}
+
+.link-learn-more{
+  text-decoration: none;
+  color: black;
+  padding: 7px 13px;
+  border-radius: 50pz;
+}
+
+.link-learn-more:hover{
+  color: white;
+}
+
+#modal-btn {
+    background-color: var(--purpleColor);
+}
+
+.wizard-button{
+  margin-top: 22px;
+}
+
+.kpop-button{
+  margin-top: 20px;
+}
+
+.find-out-more:hover{
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+
+.title-adjustment{
+  margin-top: 190px;
+  font-size: 40px;
+}
+
+/*joke code section */
+
+
+.accordion-item{
+  text-align: center !important;
+}
+
+/*information card code ends here */
+
+footer{
+
+  margin-top: 100px;
+  background-color: rgb(255, 249, 215);
+  text-align: center;
+}
+
+.footer-heading{
+  min-width: 190px;
+}
+
+.follow-us{
+  width: 190px;
+}
+
+#social-icons{
+  width: 190px;
+  margin-left: 6px;
+}
+
+
+.nav-link{
+  color: var(--purpleColor)!important;
+  font-size: 20px !important;
+}
+
+.nav-link:hover{
+  color: purple !important;
+}
+
 /* hides the sidebar when it is under 950px and then displays the burger icon */
+@media (max-width: 1660px){
+  .advance-search-container{
+    width: 400px;
+    margin-left: 20px;
+  }
+  #search-keyword, #search-date, #search-city, #default-country{
+    width: 350px;
+  }
+}
+
 @media (max-width: 950px) {
   .hide-nav-bar {
     display: none;
@@ -384,13 +611,70 @@ form .user-inputs .input-field {
     display: block;
   }
 }
+
+@media (max-width: 900px){
+  .advance-search-container{
+    width: 300px;
+    margin-left: 20px;
+  }
+  #search-keyword, #search-date, #search-city, #default-country{
+    width: 250px;
+  }
+  .carousel-card-image{
+    width: 600px;
+    height: 500px;
+  }
+  .upcoming-event-title, .calevent-feed-title{
+    font-size: 30px;
+  }
+
+@media (max-width: 800px){
+  .search-results-row{
+    flex-direction: column;
+    width: 100%;
+  }
+  .advance-search-container{
+    width: 100%;
+    margin: auto;
+  }
+  #search-keyword, #search-date, #search-city, #default-country{
+    width: 650px;
+  }
+
+  #results-table{
+      margin-top: 40px;
+    }
+  .meme-table{
+    width: auto;
+    margin: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 700px){
+  #search-keyword, #search-date, #search-city, #default-country{
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px){
+  .carousel-card-image{
+    width: 100%;
+    height: 450px;
+  }
+}
 /* turns the sidebar to 100% when it is blow 500px */
 @media (max-width: 500px) {
   .sidebar {
     width: 100%;
   }
+
+  .carousel-card-image{
+    width: 100%;
+    height: 250px;
+  }
 }
 
-#attraction-panel {
+#attraction-panel{
   display: none;
 }
