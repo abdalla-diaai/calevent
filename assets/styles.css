@@ -1,680 +1,712 @@
 /* set variables */
 :root {
-  --purpleColor: rgba(117, 85, 190, 0.8);
+    --purpleColor: rgba(117, 85, 190, 0.8);
 }
 
 /* sets default browser sizing */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* set the name Calevent size and where it is placed. */
 .appName {
-  font-size: 3rem;
-  font-weight: 500;
-  margin-right: auto;
-  align-items: center;
-  font-family: Saudagar;
-  font-weight: 500;
-  padding-top: 5px;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-right: auto;
+    align-items: center;
+    font-family: Saudagar;
+    font-weight: 500;
+    padding-top: 5px;
 }
 
 /* Changes the event part of the name Calevent to desired color */
 .appNameDecoration {
-  color: var(--purpleColor);
+    color: var(--purpleColor);
 }
 
 /* sets the navbar background and the box shadow */
 nav {
-  background-color: white;
-  box-shadow: 4px 4px 5px rgba(46, 46, 46, 0.2);
+    background-color: white;
+    box-shadow: 4px 4px 5px rgba(46, 46, 46, 0.2);
 }
 
 /* sets the ul to flex and justify content to end on the right with no list style bullet points */
 nav ul {
-  width: 100%;
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* aligning the lists and removed the underline link decoration */
 nav li {
-  height: 70px;
-  align-items: center;
-  padding: 0 20px;
-  display: flex;
-  text-decoration: none;
+    height: 70px;
+    align-items: center;
+    padding: 0 20px;
+    display: flex;
+    text-decoration: none;
 }
 
 /* changed the color of the link to black and flex aligned them center */
 nav a {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  color: black;
-  text-decoration: none;
-  font-family: Louis-George-Cafe;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    font-family: Louis-George-Cafe;
 }
 
 /* hover effect for it to go purple and underlined to the same color */
 nav a:hover {
-  color: var(--purpleColor);
-  text-decoration: underline;
-  text-decoration-style: var(--purpleColor);
-  text-underline-offset: 8px;
+    color: var(--purpleColor);
+    text-decoration: underline;
+    text-decoration-style: var(--purpleColor);
+    text-underline-offset: 8px;
 }
 
 /* setting the search form to be flex and center */
 nav li form {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 /* setting color of the placeholder */
 .search-container input::placeholder {
-  padding: 0 10px;
-  color: rgba(255, 255, 255, 0.9);
+    padding: 0 10px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* setting properties when the sidebar is active */
 .sidebar {
-  position: fixed;
-  min-height: 450px;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: auto;
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: -2px 0px 8px rgb(163, 163, 163);
-  display: none;
-  flex-direction: column;
-  backdrop-filter: blur(40px);
+    position: fixed;
+    min-height: 450px;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -2px 0px 8px rgb(163, 163, 163);
+    display: none;
+    flex-direction: column;
+    backdrop-filter: blur(40px);
 }
 
 /* puts the X icon to the right */
 .cross-icon {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 /* setting the burger icon to be not displayed and only active through JS */
 .burger-icon {
-  display: none;
+    display: none;
 }
 
 /* changing the cursor */
 .sidebar svg {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 /* changing form of the search that covers the input field to the color and rounded off edges */
 .search-bar {
-  width: 100%;
-  background: rgba(117, 85, 190, 0.5);
-  display: flex;
-  align-items: center;
-  border-radius: 50px;
-  padding: 5px 10px;
+    width: 100%;
+    background: rgba(117, 85, 190, 0.5);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 5px 10px;
 }
 
 /* making the actual input field transparent */
 .search-bar input {
-  width: 100%;
-  display: flex;
-  background: transparent;
-  outline: none;
-  border: none;
+    width: 100%;
+    display: flex;
+    background: transparent;
+    outline: none;
+    border: none;
 }
 
 /* desgin and rounding of the search button */
 .search-bar button {
-  border: none;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
 }
 
 #hero_title {
-  text-align: center;
-  color: lightgreen;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: lightgreen;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 #concert_image {
-  height: 99vh;
-  width: 99vw;
-  position: fixed;
-  top: 1;
-  left: 0;
+    height: 99vh;
+    width: 99vw;
+    position: fixed;
+    top: 1;
+    left: 0;
 }
 
 /* carousel css*/
 
 .carousel {
-  display: flex;
-  height: 600px;
-  margin-top: -17px;
+    display: flex;
+    height: 600px;
+    margin-top: -17px;
 }
 
 .hide {
-  display: none !important;
+    display: none !important;
 }
 
 .carousel-title {
-  width: 100%;
-  font-size: 40px;
-  text-align: center;
-  position: absolute;
-  margin-top: -70px;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    margin-top: -70px;
 }
 
 .carousel-right-button,
 .carousel-left-button {
-  position: absolute;
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  align-self: center;
-  background-color: rgba(56, 56, 56, 0.3);
-  cursor: pointer;
-  z-index: 2;
-  border: none;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    align-self: center;
+    background-color: rgba(56, 56, 56, 0.3);
+    cursor: pointer;
+    z-index: 2;
+    border: none;
 }
 
 .carousel-left-button {
-  left: 20px;
+    left: 20px;
 }
 
 .carousel-right-button {
-  right: 20px;
+    right: 20px;
 }
 
 .carousel-card {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  flex-wrap: wrap;
-  flex: 1;
-  background-color: var(--purpleColor);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    flex: 1;
+    background-color: var(--purpleColor);
 }
 
 .carousel-card-image {
-  align-self: center;
-  width: 900px;
-  height: 600px;
-  object-fit: cover;
+    align-self: center;
+    width: 900px;
+    height: 600px;
+    object-fit: cover;
 }
 
-#event-0-title, #event-1-title, #event-2-title, #event-3-title #event-4-title{
-  margin-top: 400px;
+#event-0-title,
+#event-1-title,
+#event-2-title,
+#event-3-title #event-4-title {
+    margin-top: 400px;
 }
 
-#event-3-title{
-  margin-top: 400px;
+#event-3-title {
+    margin-top: 400px;
 }
 
-#event-4-title{
-  margin-top: 400px;
+#event-4-title {
+    margin-top: 400px;
 }
 
-#event-0-date, #event-1-date, #event-2-date, #event-3-date #event-4-date{
-  margin-top: 300px;
+#event-0-date,
+#event-1-date,
+#event-2-date,
+#event-3-date #event-4-date {
+    margin-top: 300px;
 }
 
-#event-3-date{
-  color: white;
-  margin-top: 300px;
+#event-3-date {
+    color: white;
+    margin-top: 300px;
 }
 
-#event-4-date{
-  margin-top: 300px;
+#event-4-date {
+    margin-top: 300px;
 }
 
 .carousel-detail {
-  font-size: 20px;
-  position: absolute;
-  z-index: 1;
-  align-self: center;
-  color: white;
-  margin-top: 800px;
+    font-size: 20px;
+    position: absolute;
+    z-index: 1;
+    align-self: center;
+    color: white;
+    margin-top: 800px;
 }
 
-.carousel-detail-position{
-  margin-top: 0px;
+.carousel-detail-position {
+    margin-top: 0px;
 }
 
 .save-event-detail {
-  position: absolute;
-  top: -10px;
-  width: 160px;
-  align-self: center;
-  color: white;
-  background-color: black !important;
-  border: none !important;
-  padding: 4px 10px !important;
-  border-radius: 20px;
-  margin-top: 540px;
-  z-index: 10;
+    position: absolute;
+    top: -10px;
+    width: 160px;
+    align-self: center;
+    color: white;
+    background-color: black !important;
+    border: none !important;
+    padding: 4px 10px !important;
+    border-radius: 20px;
+    margin-top: 540px;
+    z-index: 10;
 }
 
 .carousel-dot-container {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  align-self: flex-end;
-  padding: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    align-self: flex-end;
+    padding: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .carousel-dot {
-  margin: 0;
-  margin-right: 7px;
-  margin-left: 7px;
-  align-self: center;
-  background-color: rgba(56, 56, 56, 0.6);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+    margin: 0;
+    margin-right: 7px;
+    margin-left: 7px;
+    align-self: center;
+    background-color: rgba(56, 56, 56, 0.6);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
 }
 
 .carousel-active-dot {
-  width: 10px;
-  height: 10px;
-  background-color: black;
+    width: 10px;
+    height: 10px;
+    background-color: black;
 }
+
 /*carousel css ends here */
 
-.upcoming-event-title{
-  text-align: center;
-  margin-top: 100px;
-  font-size: 60px;
-  padding-bottom: 60px;
-  font-family: Louis-George-Cafe;
+.upcoming-event-title {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 60px;
+    padding-bottom: 60px;
+    font-family: Louis-George-Cafe;
 }
 
-.form-result-container{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
+.form-result-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
 
 /* the row to the form and search results to flex */
 .search-results-row {
-  display: flex;
+    display: flex;
 }
 
 /* setting the sizing and the color of the advance search box */
 .advance-search-container {
-  background: linear-gradient(
-    130deg,
-    rgb(246, 232, 255),
-    rgba(65, 175, 209, 0.452)
-  );
+    background: linear-gradient(130deg,
+            rgb(246, 232, 255),
+            rgba(65, 175, 209, 0.452));
 
-  width: 500px;
-  height: 600px;
-  padding: 20px 20px;
-  margin-left: -100px;
-  margin-right: 100px;
-  border-radius: 15px;
-  box-shadow: 3px 3px 3px rgba(204, 204, 204, 0.61);
+    width: 500px;
+    height: 600px;
+    padding: 20px 20px;
+    margin-left: -100px;
+    margin-right: 100px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px rgba(204, 204, 204, 0.61);
 }
 
 /* sizing of the title of the form and properties so the underline works */
 .form-title {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 15px;
-  padding-bottom: 3px;
-  position: relative;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    padding-bottom: 3px;
+    position: relative;
 }
 
 /* the underlining element underneath the title */
 .form-title::before {
-  content: "";
-  position: absolute;
-  height: 4px;
-  width: 140px;
-  bottom: 0;
-  background: linear-gradient(to right, var(--purpleColor), rgb(107, 199, 230));
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 140px;
+    bottom: 0;
+    background: linear-gradient(to right, var(--purpleColor), rgb(107, 199, 230));
 }
 
 /* sets spacing between the columns in the form */
 .advance-search-container form .user-inputs {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 25px 0 8px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 25px 0 8px 0;
 }
 
 /* gives margin to the label */
 .details {
-  margin-bottom: 5px;
-  font-weight: 500;
-  display: flex;
+    margin-bottom: 5px;
+    font-weight: 500;
+    display: flex;
 }
 
 /* margin bottom on the input field so gives spacing between next line */
 form .user-inputs .input-field {
-  margin-bottom: 20px;
-  margin-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 /* sets the input field and the border to it with transition when it is in focus*/
 .user-inputs .input-field input {
-  height: 40px;
-  width: 450px;
-  outline: none;
-  border: 1px solid rgb(212, 212, 212);
-  border-radius: 5px;
-  padding-left: 10px;
-  border-width: 0 0 2px 2px;
-  transition: all 0.3s ease-in-out;
+    height: 40px;
+    width: 450px;
+    outline: none;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 5px;
+    padding-left: 10px;
+    border-width: 0 0 2px 2px;
+    transition: all 0.3s ease-in-out;
 }
 
-#search-button, #clear-button{
-  border: none;
-  width: 90px;
-  height: 40px;
-  font-size: 14px;
-  border-radius: 10px;
-  font-family: Louis-George-Cafe;
+#search-button,
+#clear-button {
+    border: none;
+    width: 90px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 10px;
+    font-family: Louis-George-Cafe;
 }
 
 /* highlights the border when user is in that input box */
 .user-inputs .input-field input:focus {
-  border-color: var(--purpleColor);
+    border-color: var(--purpleColor);
 }
 
 .meme-table {
-  display: flex;
-  margin: 20px 20px;
+    display: flex;
+    margin: 20px 20px;
 }
 
 .results-table {
-  display: flex;
-  width: 100%;
-  flex-grow: 1;
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
 }
 
-.results{
-  text-align: center;
-  margin-top: -20px;
-  font-family: Louis-George-Cafe;
-  font-weight: 600;
+.results {
+    text-align: center;
+    margin-top: -20px;
+    font-family: Louis-George-Cafe;
+    font-weight: 600;
 }
 
-.results-headers{
-  margin-left: -100px;
+.results-headers {
+    margin-left: -100px;
 }
 
-.results-headers th{
-  font-size: 12px;
-  padding-left: 20px !important;
-  padding-right: 30px !important;
-  
+.results-headers th {
+    font-size: 12px;
+    padding-left: 20px !important;
+    padding-right: 30px !important;
+
 }
 
 .meme-table {
-  display: flex;
-  margin: 20px 20px;
+    display: flex;
+    margin: 20px 20px;
 }
 
 #results-table thead th {
-  padding: 10px 60px;
-  align-content: space-between;
+    padding: 10px 60px;
+    align-content: space-between;
 }
 
 .table {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 
 /*code for information cards */
-.calevent-feed-title{
-  margin-top: 162px;
-  margin-bottom: 60px;
-  text-align: center;
-  font-size: 60px;
-  font-family: Louis-George-Cafe;
+.calevent-feed-title {
+    margin-top: 162px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 60px;
+    font-family: Louis-George-Cafe;
 }
 
-.information-cards-container{
-  gap: 20px;
-  width: 100%;
-  height: auto;
+.information-cards-container {
+    gap: 20px;
+    width: 100%;
+    height: auto;
 }
 
-.information-cards-row{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+.information-cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
-.information-card{
-  background-color: rgb(121, 121, 121);
-  width: 360px;
-  height: 430px;
-  margin-bottom: 30px;
-  background-color: var(--purpleColor);
+.information-card {
+    background-color: rgb(121, 121, 121);
+    width: 360px;
+    height: 430px;
+    margin-bottom: 30px;
+    background-color: var(--purpleColor);
 }
 
-.information-card-image{
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.information-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-.information-card:hover{
-  transform: scale(1.05);
-  transition: 0.5s;
+.information-card:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 
-.information-card-title{
-  color: white;
-  font-family: Louis-George-Cafe;
-  font-weight: 700;
-  font-size: 21px;
-  text-align: center;
-  margin-top: 20px;
+.information-card-title {
+    color: white;
+    font-family: Louis-George-Cafe;
+    font-weight: 700;
+    font-size: 21px;
+    text-align: center;
+    margin-top: 20px;
 }
 
-.information-card-paragraph{
-  color: white;
-  font-family: Louis-George-Cafe;
-  font-weight: 500;
-  margin-top: 40px;
-  font-size: 16px;
-  text-align: center;
+.information-card-paragraph {
+    color: white;
+    font-family: Louis-George-Cafe;
+    font-weight: 500;
+    margin-top: 40px;
+    font-size: 16px;
+    text-align: center;
 }
 
-.football-paragraph{
-  margin-top: 40px;
+.football-paragraph {
+    margin-top: 40px;
 }
 
-.find-out-more{
-  position: relative;
-  width: 100px;
-  height: 30px;
-  margin-left: 130px;
-  font-size: 15px;
-  border-radius: 10px;
-  border-width: 0;
-  font-family: Louis-George-Cafe;
-  font-weight: 500;
+.find-out-more {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    margin-left: 130px;
+    font-size: 15px;
+    border-radius: 10px;
+    border-width: 0;
+    font-family: Louis-George-Cafe;
+    font-weight: 500;
 }
 
-.find-out-more:hover{
-  color: white;
+.find-out-more:hover {
+    color: white;
 }
 
-.link-learn-more{
-  text-decoration: none;
-  color: black;
-  padding: 7px 13px;
-  border-radius: 50pz;
+.link-learn-more {
+    text-decoration: none;
+    color: black;
+    padding: 7px 13px;
+    border-radius: 50pz;
 }
 
-.link-learn-more:hover{
-  color: white;
+.link-learn-more:hover {
+    color: white;
 }
 
 #modal-btn {
     background-color: var(--purpleColor);
 }
 
-.wizard-button{
-  margin-top: 22px;
+.wizard-button {
+    margin-top: 22px;
 }
 
-.kpop-button{
-  margin-top: 20px;
+.kpop-button {
+    margin-top: 20px;
 }
 
-.find-out-more:hover{
-  background-color: black;
-  color: white;
-  transition: 0.5s;
+.find-out-more:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
 }
 
-.title-adjustment{
-  margin-top: 190px;
-  font-size: 40px;
+.title-adjustment {
+    margin-top: 190px;
+    font-size: 40px;
 }
 
 /*joke code section */
 
 
-.accordion-item{
-  text-align: center !important;
+.accordion {
+    text-align: center;
+    display: flex !important;
+    justify-content: center !important;
 }
 
 /*information card code ends here */
 
-footer{
+footer {
 
-  margin-top: 100px;
-  background-color: rgb(255, 249, 215);
-  text-align: center;
+    margin-top: 100px;
+    background-color: rgb(255, 249, 215);
+    text-align: center;
 }
 
-.footer-heading{
-  min-width: 190px;
+.footer-heading {
+    min-width: 190px;
 }
 
-.follow-us{
-  width: 190px;
+.follow-us {
+    width: 190px;
 }
 
-#social-icons{
-  width: 190px;
-  margin-left: 6px;
+#social-icons {
+    width: 190px;
+    margin-left: 6px;
 }
 
 
-.nav-link{
-  color: var(--purpleColor)!important;
-  font-size: 20px !important;
+.nav-link {
+    color: var(--purpleColor) !important;
+    font-size: 20px !important;
 }
 
-.nav-link:hover{
-  color: purple !important;
+.nav-link:hover {
+    color: purple !important;
+}
+
+#attraction-panel {
+    display: none;
 }
 
 /* hides the sidebar when it is under 950px and then displays the burger icon */
-@media (max-width: 1660px){
-  .advance-search-container{
-    width: 400px;
-    margin-left: 20px;
-  }
-  #search-keyword, #search-date, #search-city, #default-country{
-    width: 350px;
-  }
+@media (max-width: 1660px) {
+    .advance-search-container {
+        width: 400px;
+        margin-left: 20px;
+    }
+
+    #search-keyword,
+    #search-date,
+    #search-city,
+    #default-country {
+        width: 350px;
+    }
 }
 
 @media (max-width: 950px) {
-  .hide-nav-bar {
-    display: none;
-  }
-  .burger-icon {
-    display: block;
-  }
-}
-
-@media (max-width: 900px){
-  .advance-search-container{
-    width: 300px;
-    margin-left: 20px;
-  }
-  #search-keyword, #search-date, #search-city, #default-country{
-    width: 250px;
-  }
-  .carousel-card-image{
-    width: 600px;
-    height: 500px;
-  }
-  .upcoming-event-title, .calevent-feed-title{
-    font-size: 30px;
-  }
-
-@media (max-width: 800px){
-  .search-results-row{
-    flex-direction: column;
-    width: 100%;
-  }
-  .advance-search-container{
-    width: 100%;
-    margin: auto;
-  }
-  #search-keyword, #search-date, #search-city, #default-country{
-    width: 650px;
-  }
-
-  #results-table{
-      margin-top: 40px;
+    .hide-nav-bar {
+        display: none;
     }
-  .meme-table{
-    width: auto;
-    margin: 0;
-    justify-content: center;
-  }
+
+    .burger-icon {
+        display: block;
+    }
 }
 
-@media (max-width: 700px){
-  #search-keyword, #search-date, #search-city, #default-country{
-    width: 100%;
-  }
+@media (max-width: 900px) {
+    .advance-search-container {
+        width: 300px;
+        margin-left: 20px;
+    }
+
+    #search-keyword,
+    #search-date,
+    #search-city,
+    #default-country {
+        width: 250px;
+    }
+
+    .carousel-card-image {
+        width: 600px;
+        height: 500px;
+    }
+
+    .upcoming-event-title,
+    .calevent-feed-title {
+        font-size: 30px;
+    }
 }
 
-@media (max-width: 600px){
-  .carousel-card-image{
-    width: 100%;
-    height: 450px;
-  }
+@media (max-width: 800px) {
+    .search-results-row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .advance-search-container {
+        width: 100%;
+        margin: auto;
+    }
+
+    #search-keyword,
+    #search-date,
+    #search-city,
+    #default-country {
+        width: 650px;
+    }
+
+    #results-table {
+        margin-top: 40px;
+    }
+
+    .meme-table {
+        width: auto;
+        margin: 0;
+        justify-content: center;
+    }
 }
+
+@media (max-width: 700px) {
+
+    #search-keyword,
+    #search-date,
+    #search-city,
+    #default-country {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-card-image {
+        width: 100%;
+        height: 450px;
+    }
+}
+
 /* turns the sidebar to 100% when it is blow 500px */
 @media (max-width: 500px) {
-  .sidebar {
-    width: 100%;
-  }
+    .sidebar {
+        width: 100%;
+    }
 
-  .carousel-card-image{
-    width: 100%;
-    height: 250px;
-  }
-}
-
-#attraction-panel{
-  display: none;
+    .carousel-card-image {
+        width: 100%;
+        height: 250px;
+    }
 }
