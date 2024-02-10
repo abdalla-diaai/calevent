@@ -575,23 +575,20 @@ form .user-inputs .input-field {
 /*information card code ends here */
 
 footer {
-
     margin-top: 100px;
     background-color: rgb(255, 249, 215);
     text-align: center;
 }
 
 .footer-heading {
-    min-width: 190px;
+    text-align: center;
+
 }
 
-.follow-us {
-    width: 190px;
-}
+
 
 #social-icons {
-    width: 190px;
-    margin-left: 6px;
+    justify-content: center;
 }
 
 
@@ -680,6 +677,8 @@ footer {
         margin: 0;
         justify-content: center;
     }
+
+
 }
 
 @media (max-width: 700px) {
