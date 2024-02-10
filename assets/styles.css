@@ -412,6 +412,10 @@ form .user-inputs .input-field {
     font-family: Louis-George-Cafe;
 }
 
+#search-button:hover, #clear-button:hover {
+    background-color: var(--purpleColor);
+    cursor: pointer;
+}
 /* highlights the border when user is in that input box */
 .user-inputs .input-field input:focus {
     border-color: var(--purpleColor);
