@@ -27,6 +27,7 @@ Integration with Google Search:
 Fun Extra: Joke Generator:
     As an added feature, I want to have a random joke generator for a lighthearted experience.
     The joke should be prominently displayed, and clicking a button should generate a new joke.
+    **API limit is 100 requests per 15 minutes. Sometimes the fetch will not render results if this limit is exceeded.**
     Technological Stack:
 
 The app should utilize JavaScript, HTML, CSS, Bootstrap, and jQuery.
