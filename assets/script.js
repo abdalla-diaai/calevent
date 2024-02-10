@@ -45,7 +45,6 @@ function ticketFetch(fetchUrl) {
 
           // check if price is available or not available if not
           try {
-            console.log(data._embedded.events[i].priceRanges[0].min)
             if (parseInt(data._embedded.events[i].priceRanges[0].min) > 0) {
                 tableRow.append(
                     $("<td>").text(`£${parseInt(data._embedded.events[i].priceRanges[0].min)/0.8}`))
@@ -73,20 +72,28 @@ $('#clear-button').on('click', function(){
 
 })
 // jokes fetch
+var backupJokes = [{'Why did the ghost go to rehab?': 'He was addicted to boos.'}, {'Why did the car get a flat tire?': 'Because there was a fork in the road!'}, {'How did the hipster burn his mouth?': 'He ate his pizza before it was cool.'}, {'What did the janitor say when he jumped out of the closet?': ' SUPPLIES!!!!'}, {'Have you heard about the band 1023MB?': 'It is probably because they have not got a gig yet…'}
+]
 
 var jokesUrl = 'https://official-joke-api.appspot.com/random_joke'
 
- function jokeFetch() {
-  fetch(jokesUrl)
-    .then(function (response) {
-      return response.json();
-    })
-     .then(function (data) {
-      document.querySelector(".accordion-button").innerHTML = data.setup;
-       document.querySelector(".accordion-body").innerHTML = data.punchline;
-     });
- }
-
+function jokeFetch() {
+    fetch(jokesUrl)
+      .then(function (response) {
+  
+          return response.json();
+      })
+      .then(function (data) {
+        document.querySelector(".accordion-button").innerHTML = data.setup;
+        document.querySelector(".accordion-body").innerHTML = data.punchline;
+      })
+      .catch(function (error) {
+        var randomJoke = backupJokes[Math.floor(Math.random() * backupJokes.length)];
+        document.querySelector(".accordion-button").innerHTML = Object.keys(randomJoke);
+        document.querySelector(".accordion-body").innerHTML = Object.values(randomJoke);
+      });
+  }
+  
 
 
 jokeFetch();
@@ -97,7 +104,6 @@ fetch(suggestUrl)
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
    for(var i=0;i<data._embedded.events.length;i++){
     $(`#event-${i}-image`).attr('src',data._embedded.events[i].images[0].url) 
     $(`#event-${i}-title`).text(data._embedded.events[i].name)

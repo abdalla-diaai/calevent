@@ -180,7 +180,7 @@ nav li form {
     width: 70px;
     border-radius: 50%;
     align-self: center;
-    background-color: rgba(56, 56, 56, 0.3);
+    background-color: rgba(56, 56, 56, 0.5);
     cursor: pointer;
     z-index: 2;
     border: none;
@@ -192,6 +192,11 @@ nav li form {
 
 .carousel-right-button {
     right: 20px;
+}
+
+.carousel-right-button:hover, .carousel-left-button:hover {
+    background-color: rgba(56, 56, 56, 0.1);
+    cursor: pointer;
 }
 
 .carousel-card {
@@ -268,6 +273,14 @@ nav li form {
     margin-top: 540px;
     z-index: 10;
 }
+
+.save-event-detail {
+cursor: pointer !important;
+}
+
+.save-event-detail:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    }
 
 .carousel-dot-container {
     list-style: none;
