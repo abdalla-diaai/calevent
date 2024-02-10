@@ -559,6 +559,10 @@ form .user-inputs .input-field {
     font-size: 40px;
 }
 
+#attraction-panel {
+    display: none;
+}
+
 /*joke code section */
 
 
@@ -598,10 +602,6 @@ footer {
 
 .nav-link:hover {
     color: purple !important;
-}
-
-#attraction-panel {
-    display: none;
 }
 
 /* hides the sidebar when it is under 950px and then displays the burger icon */

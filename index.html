@@ -1,117 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
     <title>Calevent</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navigation bar -->
     <nav>
-        <!-- sidebar with the svg X icon and the links with search function -->
-        <ul class="sidebar">
-            <li class="cross-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                    <path
-                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                </svg>
-            </li>
-            <li><a href="#carousel">What's Popular</a></li>
-            <li><a href="#search">Search Event</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#jokes">Jokes</a></li>
-            <li class="search-container">
-                <form target="_blank" class="search-bar" action="https://www.google.com/search">
-                    <input type="text" name="q" id="nav-search" placeholder="Search" />
-                    <button type="submit" form="search-button">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </form>
-            </li>
-        </ul>
+      <!-- sidebar with the svg X icon and the links with search function -->
+      <ul class="sidebar">
+        <li class="cross-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 -960 960 960"
+            width="24"
+          >
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            />
+          </svg>
+        </li>
+        <li><a href="#carousel">What's Popular</a></li>
+        <li><a href="#search">Search Event</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#jokes">Jokes</a></li>
+        <li class="search-container">
+          <form target="_blank" class="search-bar" action="https://www.google.com/search">
+            <input type="text" name="q" id="nav-search" placeholder="Search" />
+            <button type="submit" form="search-button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </li>
+      </ul>
 
-        <!-- full sized navbar with links and burger icon when on smaller screen size -->
-        <ul>
-            <li class="appName">Cal<span class="appNameDecoration">event</span></li>
-            <li class="hide-nav-bar"><a href="#carousel">What's Popular</a></li>
-            <li class="hide-nav-bar"><a href="#search">Search Event</a></li>
-            <li class="hide-nav-bar"><a href="#news">News</a></li>
-            <li class="hide-nav-bar"><a href="#jokes">Jokes</a></li>
-            <li class="search-container">
-                <form target="_blank" class="search-bar hide-nav-bar" action="https://google.com/search">
+      <!-- full sized navbar with links and burger icon when on smaller screen size -->
+      <ul>
+        <li class="appName">Cal<span class="appNameDecoration">event</span></li>
+        <li class="hide-nav-bar"><a href="#carousel">What's Popular</a></li>
+        <li class="hide-nav-bar"><a href="#search">Search Event</a></li>
+        <li class="hide-nav-bar"><a href="#news">News</a></li>
+        <li class="hide-nav-bar"><a href="#jokes">Jokes</a></li>
+        <li class="search-container">
+         <form target="_blank" class="search-bar hide-nav-bar" action="https://google.com/search">
                     <input type="text" name="q" id="nav-search" placeholder="Google Search" />
                     <button type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
-            </li>
-            <li class="burger-icon">
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
-                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-                    </svg>
-                </a>
-            </li>
-        </ul>
+        </li>
+        <li class="burger-icon">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="26"
+              viewBox="0 -960 960 960"
+              width="26"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg>
+          </a>
+        </li>
+      </ul>
     </nav>
 
     <!-- Taha Carousel Code -->
 
     <div id="carousel" class="carousel">
-        <button class="carousel-left-button">
-            <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="carousel-right-button">
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
+      <button class="carousel-left-button">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="carousel-right-button">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
 
-        <div class="carousel-card">
-            <img class="carousel-card-image" src="" alt="fetched image goes here" id="event-0-image" />
-            <p class="carousel-detail" id="event-0-title">*Event Detail here</p>
-            <p class="carousel-detail carousel-detail-position" id="event-0-date">*Date</p>
-            <a id="event-0-url" href="" class="save-event-detail btn btn-primary">More Details</a>
-        </div>
+      <div class="carousel-card">
+        <img
+          class="carousel-card-image"
+          src=""
+          alt="fetched image goes here"
+          id="event-0-image"
+        />
+        <p class="carousel-detail" id="event-0-title">*Event Detail here</p>
+        <p class="carousel-detail carousel-detail-position" id="event-0-date">*Date</p>
+        <a id="event-0-url" href="" class="save-event-detail btn btn-primary"
+          >More Details</a
+        >
+      </div>
 
-        <div id="carousel-2" class="carousel-card hide">
-            <img class="carousel-card-image" src="" alt="fetched image goes here" id="event-1-image" />
-            <p class="carousel-detail" id="event-1-title">*Event Detail here</p>
-            <p class="carousel-detail carousel-detail-position" id="event-1-date">*Date</p>
-            <a id="event-1-url" href="" class="save-event-detail btn btn-primary">More Details</a>
-        </div>
+      <div id="carousel-2" class="carousel-card hide">
+        <img
+          class="carousel-card-image"
+          src=""
+          alt="fetched image goes here"
+          id="event-1-image"
+        />
+        <p class="carousel-detail" id="event-1-title">*Event Detail here</p>
+        <p class="carousel-detail carousel-detail-position" id="event-1-date">*Date</p>
+        <a id="event-1-url" href="" class="save-event-detail btn btn-primary"
+          >More Details</a
+        >
+      </div>
 
-        <div id="carousel-3" class="carousel-card hide">
-            <img class="carousel-card-image" src="" alt="fetched image goes here" id="event-2-image" />
-            <p class="carousel-detail" id="event-2-title">*Event Detail here</p>
-            <p class="carousel-detail carousel-detail-position" id="event-2-date">*Date</p>
-            <a id="event-2-url" href="" class="save-event-detail btn btn-primary">More Details</a>
-        </div>
+      <div id="carousel-3" class="carousel-card hide">
+        <img
+          class="carousel-card-image"
+          src=""
+          alt="fetched image goes here"
+          id="event-2-image"
+        />
+        <p class="carousel-detail" id="event-2-title">*Event Detail here</p>
+        <p class="carousel-detail carousel-detail-position" id="event-2-date">*Date</p>
+        <a id="event-2-url" href="" class="save-event-detail btn btn-primary"
+          >More Details</a
+        >
+      </div>
 
-        <div id="carousel-4" class="carousel-card hide">
-            <img class="carousel-card-image" src="" alt="fetched image goes here" id="event-3-image" />
-            <p class="carousel-detail" id="event-3-title">*Event Detail here</p>
-            <p class="carousel-detail carousel-detail-position" id="event-3-date">*Date</p>
-            <a id="event-3-url" href="" class="save-event-detail btn btn-primary">More Details</a>
-        </div>
+      <div id="carousel-4" class="carousel-card hide">
+        <img
+          class="carousel-card-image"
+          src=""
+          alt="fetched image goes here"
+          id="event-3-image"
+        />
+        <p class="carousel-detail" id="event-3-title">*Event Detail here</p>
+        <p class="carousel-detail carousel-detail-position" id="event-3-date">*Date</p>
+        <a id="event-3-url" href="" class="save-event-detail btn btn-primary"
+          >More Details</a
+        >
+      </div>
 
-        <div id="carousel-5" class="carousel-card hide">
-            <img class="carousel-card-image" src="" alt="fetched image goes here" id="event-4-image" />
-            <p class="carousel-detail" id="event-4-title">*Event Detail here</p>
-            <p class="carousel-detail carousel-detail-position" id="event-4-date">*Date</p>
-            <a id="event-4-url" href="" class="save-event-detail btn btn-primary">More Details</a>
-        </div>
+      <div id="carousel-5" class="carousel-card hide">
+        <img
+          class="carousel-card-image"
+          src=""
+          alt="fetched image goes here"
+          id="event-4-image"
+        />
+        <p class="carousel-detail" id="event-4-title">*Event Detail here</p>
+        <p class="carousel-detail carousel-detail-position" id="event-4-date">*Date</p>
+        <a id="event-4-url" href="" class="save-event-detail btn btn-primary"
+          >More Details</a
+        >
+      </div>
 
-        <ul class="carousel-dot-container">
-            <li class="carousel-dot carousel-active-dot"></li>
-            <li class="carousel-dot"></li>
-            <li class="carousel-dot"></li>
-            <li class="carousel-dot"></li>
-            <li class="carousel-dot"></li>
-        </ul>
+      <ul class="carousel-dot-container">
+        <li class="carousel-dot carousel-active-dot"></li>
+        <li class="carousel-dot"></li>
+        <li class="carousel-dot"></li>
+        <li class="carousel-dot"></li>
+        <li class="carousel-dot"></li>
+      </ul>
     </div>
     <!-- My Form and the right the right side meme generator etc -->
 
@@ -119,196 +170,224 @@
     <h2 id="search" class="upcoming-event-title">SEARCH UPCOMING <span class="appNameDecoration">EVENTS</span></h2>
 
     <div class="form-result-container">
-        <div class="search-results-row">
-            <div class="advance-search-container">
-                <div class="form-title">Event Search</div>
-                <form id="search-form">
-                    <div class="user-inputs">
-                        <div class="input-field">
-                            <label for="form-keyword" class="details">Keyword</label>
-                            <input type="text" name="form-keyword" placeholder="Enter Keyword Here (optional)"
-                                id="search-keyword" />
-                        </div>
+      <div class="search-results-row">
+        <div class="advance-search-container">
+          <div class="form-title">Event Search</div>
+          <form id="search-form">
+            <div class="user-inputs">
+              <div class="input-field">
+                <label for="form-keyword" class="details">Keyword</label>
+                <input
+                  type="text"
+                  name="form-keyword"
+                  placeholder="Enter Keyword Here (optional)"
+                  id="search-keyword"
+                />
+              </div>
 
-                        <div class="input-field">
-                            <label for="form-date" class="details">Date</label>
-                            <input type="text" name="form-date" placeholder="YYYY-MM-DD" id="search-date" />
-                        </div>
+              <div class="input-field">
+                <label for="form-date" class="details">Date</label>
+                <input
+                  type="text"
+                  name="form-date"
+                  placeholder="YYYY-MM-DD"
+                  id="search-date"
+                />
+              </div>
 
-                        <div class="input-field">
-                            <label for="form-city" class="details">City</label>
-                            <input type="text" name="form-city" placeholder="Enter a city" id="search-city" />
-                        </div>
+              <div class="input-field">
+                <label for="form-city" class="details">City</label>
+                <input
+                  type="text"
+                  name="form-city"
+                  placeholder="Enter a city"
+                  id="search-city"
+                />
+              </div>
 
-                        <div class="input-field">
-                            <label for="form-country" class="details">Country</label>
-                            <input type="text" name="form-country" value="UK" readonly id="default-country" />
-                        </div>
-                    </div>
-                    <div class="form-buttons">
-                        <button type="submit" id="search-button">SUBMIT</button>
-                        <button type="button" id="clear-button">CLEAR</button>
-                    </div>
-                </form>
+              <div class="input-field">
+                <label for="form-country" class="details">Country</label>
+                <input
+                  type="text"
+                  name="form-country"
+                  value="UK"
+                  readonly
+                  id="default-country"
+                />
+              </div>
             </div>
-
-            <div class="meme-table">
-
-                <div id="results-table">
-                    <!-- search results table here -->
-                    <h2 class="results">RESULTS</h2>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr class="results-headers">
-                                <th scope="col-lg-4">Event Name</th>
-                                <th scope="col-lg-4">Date</th>
-                                <th scope="col-lg-4">Location</th>
-                                <th scope="col-lg-4">Price</th>
-                            </tr>
-                        </thead>
-                        <tbody class="table-group-divider" id="table-body"></tbody>
-                    </table>
-                </div>
+            <div class="form-buttons">
+              <button type="submit" id="search-button">SUBMIT</button>
+              <button type="button" id="clear-button">CLEAR</button>
             </div>
-            <div class="modal" tabindex="-1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">No Results</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>No Available Events. Please Change Search Parameters and Try Again!.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button id="modal-btn" type="button" class="btn btn-secondary"
-                                data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </form>
         </div>
+
+        <div class="meme-table">
+          
+          <div id="results-table">
+            <!-- search results table here -->
+            <h2 class="results">RESULTS</h2>
+            <table class="table table-striped">
+              <thead>
+                <tr class="results-headers">
+                  <th scope="col-lg-4">Event Name</th>
+                  <th scope="col-lg-4">Date</th>
+                  <th scope="col-lg-4">Location</th>
+                  <th scope="col-lg-4">Price</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider" id="table-body"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">No Results</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>No Available Events. Please Change Search Parameters and Try Again!.</p>
+                </div>
+                <div class="modal-footer">
+                  <button id="modal-btn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
 
-    <!--additional information cards-->
+        <!--additional information cards-->
 
-    <h2 id="news" class="calevent-feed-title">CAL<span class="appNameDecoration">EVENT</span> NEWS</h2>
+        <h2 id="news" class="calevent-feed-title">CAL<span class="appNameDecoration">EVENT</span> NEWS</h2>
 
-    <div class="information-cards-container">
-        <div class="information-cards-row">
+        <div class="information-cards-container">
+            <div class="information-cards-row">
 
-            <div class="information-card">
+                <div class="information-card">
 
-                <img class="information-card-image" src="assets/images/card1-image.png">
-                <h6 class="information-card-title">WHO'S THE GREATEST FOOTBALLER?</h6>
-                <p class="information-card-paragraph football-paragraph">RadioTimes answers football fans most asked
-                    question of all time</p>
-                <button class="find-out-more"><a target="_blank" class="link-learn-more"
-                        href="https://www.radiotimes.com/tv/sport/football/best-football-players-world/">Learn
-                        More</a></button>
-            </div>
-
-            <div class="information-card">
-
-                <img class="information-card-image" src="assets/images/card2-image.webp">
-                <h6 class="information-card-title">THE WORLD OF MAGIC AWAITS YOU AT WIZARD WORLD</h6>
-                <p class="information-card-paragraph">Explore Wizarding Worlds latest news</p>
-                <button class="find-out-more wizard-button"><a target="_blank" class="link-learn-more"
-                        href="https://www.wizardingworld.com/news">Learn More</a></button>
-            </div>
-
-            <div class="information-card">
-                <img class="information-card-image" src="assets/images/card3-image.jpg">
-                <h6 class="information-card-title">KPOP FANS ARE SHOCKED WITH THEIR IDOL'S LATEST DRAMA</h6>
-                <p class="information-card-paragraph">Catch up with your kpop idol's latest drama</p>
-                <button class="find-out-more kpop-button"><a target="_blank" class="link-learn-more"
-                        href="https://www.koreaboo.com/">Learn More</a></button>
-            </div>
-
-        </div>
-
-        <!--jokes form-->
-
-        <h2 id="jokes" class="calevent-feed-title title-adjustment">YOUR DAILY DOSE OF CAL<span
-                class="appNameDecoration">EVENT</span> JOKES</h2>
-
-        <div class="accordion accordion-flush" id="#joke">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#joke">
-                    <div class="accordion-body"></div>
+                    <img class="information-card-image" src="assets/images/card1-image.png">
+                    <h6 class="information-card-title">WHO'S THE GREATEST FOOTBALLER?</h6>
+                    <p class="information-card-paragraph football-paragraph">RadioTimes answers football fans most asked question of all time</p>
+                    <button class="find-out-more"><a target="_blank" class="link-learn-more" href="https://www.radiotimes.com/tv/sport/football/best-football-players-world/">Learn More</a></button>
                 </div>
-            </div>
-        </div>
-
-
-        <!-- footer -->
-        <footer>
-            <hr />
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-4 footer-cols footer-heading">
-                        <h6><i class="fa-solid fa-calendar"></i> CalEvent</h6>
-                        <p id="contact-me">
-                            <i class="fa-solid fa-envelope"></i>
-                            <a href="mailto:hello@calevent.com" id="email">hello@calevent.com</a>
-                            <br />
-                            <i class="fa-solid fa-phone"></i> +44 (0)777 7777 777
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-md-3 col-sm-3 d-none d-sm-block footer-colsp">
-
-                        <div class="footer-heading">
-                            <h6 class="address">Address</h6>
-                            <address>
-                                <i class="fa-solid fa-location-dot"></i> 4 Privet Drive
-                                <br />
-                                Little Whinging, Surrey
-                                <br />
-                                WD25 7LR
-                                <br />
-                                United Kingdom
-                            </address>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-5 col-sm-5 footer-cols">
-
-                        <div class="footer-heading">
-                            <h6 class="follow-us">Follow us</h6>
-                            <ul class="nav" id="social-icons">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link"><i class="fa-brands fa-twitter fa-lg"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link"><i class="fa-brands fa-facebook fa-lg"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link"><i class="fa-brands fa-instagram fa-lg"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+    
+                <div class="information-card">
+                    
+                    <img class="information-card-image" src="assets/images/card2-image.webp">
+                    <h6 class="information-card-title">THE WORLD OF MAGIC AWAITS YOU AT WIZARD WORLD</h6>
+                    <p class="information-card-paragraph">Explore Wizarding Worlds latest news</p>
+                    <button class="find-out-more wizard-button"><a target="_blank" class="link-learn-more" href="https://www.wizardingworld.com/news">Learn More</a></button>
                 </div>
+
+                <div class="information-card">
+                    <img class="information-card-image" src="assets/images/card3-image.jpg">
+                    <h6 class="information-card-title">KPOP FANS ARE SHOCKED WITH THEIR IDOL'S LATEST DRAMA</h6>
+                    <p class="information-card-paragraph">Catch up with your kpop idol's latest drama</p>
+                    <button class="find-out-more kpop-button"><a target="_blank" class="link-learn-more" href="https://www.koreaboo.com/">Learn More</a></button>
+                </div>
+                
             </div>
-        </footer>
+        
+  <!--jokes form-->
 
-        <!-- bootstrap javascript -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"></script>
-        <!-- font-awesome script -->
-        <script src="https://kit.fontawesome.com/51fc4ce678.js" crossorigin="anonymous"></script>
-        <!-- javascript file -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="./assets/script.js"></script>
-</body>
+  <h2 id="jokes" class="calevent-feed-title title-adjustment">YOUR DAILY DOSE OF CAL<span class="appNameDecoration">EVENT</span> JOKES</h2>
 
+            <div class="accordion accordion-flush" id="#joke">
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseOne" aria-expanded="false"
+                          aria-controls="flush-collapseOne">
+                      </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#joke">
+                      <div class="accordion-body"></div>
+                  </div>
+              </div>
+          </div>
+
+
+    <!-- footer -->
+    <footer>
+      <hr />
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-4 footer-cols footer-heading">
+            <h6><i class="fa-solid fa-calendar"></i> CalEvent</h6>
+            <p id="contact-me">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:hello@calevent.com" id="email"
+                >hello@calevent.com</a
+              >
+              <br />
+              <i class="fa-solid fa-phone"></i> +44 (0)777 7777 777
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-3 col-sm-3 d-none d-sm-block footer-colsp">
+
+            <div class="footer-heading">
+              <h6 class="address">Address</h6>
+            <address>
+              <i class="fa-solid fa-location-dot"></i> 4 Privet Drive
+              <br />
+              Little Whinging, Surrey
+              <br />
+              WD25 7LR
+              <br />
+              United Kingdom
+            </address>
+          </div>
+          </div>
+
+          <div class="col-lg-4 col-md-5 col-sm-5 footer-cols">
+
+            <div class="footer-heading">
+              <h6 class="follow-us">Follow us</h6>
+                <ul class="nav" id="social-icons">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"
+                      ><i class="fa-brands fa-twitter fa-lg"></i
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"
+                      ><i class="fa-brands fa-facebook fa-lg"></i
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"
+                      ><i class="fa-brands fa-instagram fa-lg"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- bootstrap javascript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <!-- font-awesome script -->
+    <script
+      src="https://kit.fontawesome.com/51fc4ce678.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- javascript file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/script.js"></script>
+  </body>
 </html>
