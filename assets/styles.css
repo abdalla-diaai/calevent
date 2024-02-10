@@ -555,9 +555,10 @@ form .user-inputs .input-field {
 
 /*joke code section */
 
-
-.accordion-item{
-  text-align: center !important;
+.accordion {
+    text-align: center;
+    display: flex !important;
+    justify-content: center !important;
 }
 
 /*information card code ends here */
