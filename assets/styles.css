@@ -194,7 +194,8 @@ nav li form {
     right: 20px;
 }
 
-.carousel-right-button:hover, .carousel-left-button:hover {
+.carousel-right-button:hover,
+.carousel-left-button:hover {
     background-color: rgba(56, 56, 56, 0.1);
     cursor: pointer;
 }
@@ -275,12 +276,12 @@ nav li form {
 }
 
 .save-event-detail {
-cursor: pointer !important;
+    cursor: pointer !important;
 }
 
 .save-event-detail:hover {
     background-color: rgba(255, 255, 255, 0.2) !important;
-    }
+}
 
 .carousel-dot-container {
     list-style: none;
@@ -723,4 +724,3 @@ footer {
         height: 250px;
     }
 }
-
