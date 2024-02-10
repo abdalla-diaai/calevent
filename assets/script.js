@@ -87,7 +87,10 @@ var jokesUrl = 'https://official-joke-api.appspot.com/random_joke'
      });
  }
 
- jokeFetch();
+
+
+jokeFetch();
+
 function suggestFetch(){
 fetch(suggestUrl)
     .then(function (response) {
