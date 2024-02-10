@@ -413,7 +413,8 @@ form .user-inputs .input-field {
 }
 
 #search-button:hover, #clear-button:hover {
-    background-color: var(--purpleColor);
+    background-color: black;
+    color: white;
     cursor: pointer;
 }
 /* highlights the border when user is in that input box */
@@ -603,12 +604,9 @@ footer {
 
 }
 
-
-
 #social-icons {
     justify-content: center;
 }
-
 
 .nav-link {
     color: var(--purpleColor) !important;
