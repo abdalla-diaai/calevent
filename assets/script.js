@@ -12,7 +12,7 @@ $("#search-button").on("click", function (event) {
   var searchDate = $("#search-date").val();
   var searchCity = $("#search-city").val();
   var queryUrl;
-  console.log(searchGenre);
+//   to make keyword search optional
   if (searchGenre === " ") {
     queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?city=${searchCity}&startDateTime=${searchDate}T10:00:00Z&countryCode=us&apikey=${apiKey}`;
   } else {
@@ -30,10 +30,8 @@ function ticketFetch(fetchUrl) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
-      if (!data) {
-        console.log("word");
-      } else {
+    // try block for no results
+      try {
         // create table rows, text value will be changed later to show results data
         for (var i = 0; i < data._embedded.events.length; i++) {
           var tableRow = $("<tr/>");
@@ -62,7 +60,11 @@ function ticketFetch(fetchUrl) {
       
     }
       }
-
+    //   show modal when no results are available
+      catch(err){
+        var modalPopup = new bootstrap.Modal($('.modal'), {});
+        modalPopup.show();
+      }
     });
 }
 
