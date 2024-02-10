@@ -530,7 +530,9 @@ form .user-inputs .input-field {
   color: white;
 }
 
-
+#modal-btn {
+    background-color: var(--purpleColor);
+}
 
 .wizard-button{
   margin-top: 22px;
@@ -557,9 +559,6 @@ form .user-inputs .input-field {
 .accordion-item{
   text-align: center !important;
 }
-
-
-
 
 /*information card code ends here */
 
