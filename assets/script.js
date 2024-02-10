@@ -8,17 +8,24 @@ var suggestUrl = `https://app.ticketmaster.com/discovery/v2/suggest.json?apikey=
 $("#search-button").on("click", function (event) {
   event.preventDefault();
   $("#table-body").empty();
-  resultsTable = 0;
   var searchGenre = $("#search-keyword").val();
   var searchDate = $("#search-date").val();
   var searchCity = $("#search-city").val();
+  var queryUrl;
   console.log(searchGenre);
-  if (searchGenre === "") {
-    var queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?city=${searchCity}&startDateTime=${searchDate}T10:00:00Z&countryCode=us&apikey=${apiKey}`;
+  if (searchGenre === " ") {
+    queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?city=${searchCity}&startDateTime=${searchDate}T10:00:00Z&countryCode=us&apikey=${apiKey}`;
   } else {
-    var queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=${searchGenre}&city=${searchCity}&startDateTime=${searchDate}T10:00:00Z&countryCode=GB&apikey=${apiKey}`;
+    queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=${searchGenre}&city=${searchCity}&startDateTime=${searchDate}T10:00:00Z&countryCode=GB&apikey=${apiKey}`;
   }
-  fetch(queryUrl)
+  ticketFetch(queryUrl);
+  $("#search-city").val("");
+  $("#search-date").val("");
+  $("#search-keyword").val("");
+});
+
+function ticketFetch(fetchUrl) {
+    fetch(fetchUrl)
     .then(function (response) {
       return response.json();
     })
@@ -27,6 +34,7 @@ $("#search-button").on("click", function (event) {
       if (!data) {
         console.log("word");
       } else {
+        // create table rows, text value will be changed later to show results data
         for (var i = 0; i < data._embedded.events.length; i++) {
           var tableRow = $("<tr/>");
           tableRow.append($("<td>").text(data._embedded.events[i].name));
@@ -42,13 +50,10 @@ $("#search-button").on("click", function (event) {
             console.log(data._embedded.events[i].priceRanges[0].min)
             if (parseInt(data._embedded.events[i].priceRanges[0].min) > 0) {
                 tableRow.append(
-                    $("<td>").text(`$${data._embedded.events[i].priceRanges[0].min}`))
+                    $("<td>").text(`£${parseInt(data._embedded.events[i].priceRanges[0].min)/0.8}`))
             } else {
                 tableRow.append($("<td>").text("Not Available"));
-
-       
             }
-
          }
          catch (err) {
           tableRow.append($("<td>").text("Not Available"));
@@ -57,61 +62,20 @@ $("#search-button").on("click", function (event) {
       
     }
       }
-      // create table rows, text value will be changed later to show results data
+
     });
-
-  // ticketFetch();
-
-  $("#search-city").val("");
-  $("#search-date").val("");
-  $("#search-keyword").val("");
-});
-
-function ticketFetch() {
-  var queryUrl = `https://app.ticketmaster.com/discovery/v2/events.json?keyword=${searchGenre}&city=${searchCity}&startDateTime=${searchDate}&countryCode=GB&apikey=${apiKey}`;
-  fetch(queryUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      // create table rows, text value will be changed later to show results data
-      for (var i = 0; i < data._embedded.events.length; i++) {
-        var tableRow = $("<tr/>");
-        tableRow.append($("<td>").text(data._embedded.events[i].name));
-        tableRow.append(
-          $("<td>").text(data._embedded.events[i].dates.start.localDate)
-        );
-        tableRow.append(
-          $("<td>").text(data._embedded.events[i]._embedded.venues[0].name)
-        );
-
-        // check if price is available or not available if not
-        try {
-            if (data._embedded.events[i].priceRanges[0].min !== 'undefined') {
-                tableRow.append(
-                    $("<td>").text(`$${data._embedded.events[i].priceRanges[0].min}`))
-            } else {
-                tableRow.append($("<td>").text("Not Available"));
-
-       
-            }
-
-         }
-         catch (err) {
-          tableRow.append($("<td>").text("Not Available"));
-        }
-        $("#table-body").append(tableRow);
-      
-    }
-});
 }
 
+$('#clear-button').on('click', function(){
+    $("#table-body").empty();
+
+})
 // jokes fetch
 
 var jokesUrl = 'https://official-joke-api.appspot.com/random_joke'
-var jokesUpdatedUrl = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + jokesUrl
+
  function jokeFetch() {
-  fetch(jokesUpdatedUrl)
+  fetch(jokesUrl)
     .then(function (response) {
       return response.json();
     })
