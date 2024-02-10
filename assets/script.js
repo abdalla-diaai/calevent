@@ -77,8 +77,8 @@ var backupJokes = [{'Why did the ghost go to rehab?': 'He was addicted to boos.'
 
 var jokesUrl = 'https://official-joke-api.appspot.com/random_joke'
 
-function jokeFetch() {
-    fetch(jokesUrl)
+function jokeFetch(apiUrl) {
+    fetch(apiUrl)
       .then(function (response) {
   
           return response.json();
@@ -96,7 +96,7 @@ function jokeFetch() {
   
 
 
-jokeFetch();
+jokeFetch(jokesUrl);
 
 function suggestFetch(){
 fetch(suggestUrl)
