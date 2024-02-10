@@ -692,6 +692,7 @@ footer {
     }
 }
 
+
 @media (max-width: 600px) {
     .carousel-card-image {
         width: 100%;
@@ -710,3 +711,4 @@ footer {
         height: 250px;
     }
 }
+
